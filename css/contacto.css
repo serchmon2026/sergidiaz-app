@@ -1,0 +1,219 @@
+/* ═══════════════════════════════════════════════
+   CONTACTO.CSS — CTA, Footer, Cookie Banner
+   ✅ FIJO
+   ═══════════════════════════════════════════════ */
+
+/* ── Contacto ── */
+.contacto {
+  padding: 10rem 4rem;
+  position: relative; overflow: hidden;
+}
+.contacto-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(212,168,83,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+.contacto-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: start;
+  position: relative;
+}
+.contacto-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 2rem;
+}
+.contacto-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  line-height: 1.0; margin-bottom: 1.5rem;
+}
+.contacto-title em { font-style: italic; color: var(--accent); }
+.contacto-sub {
+  font-size: 0.88rem; color: var(--muted);
+  margin-bottom: 2.5rem; line-height: 1.8;
+}
+
+/* ── Info lateral ── */
+.contacto-info-items {
+  display: flex; flex-direction: column; gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+.contacto-info-item {
+  display: flex; align-items: center; gap: 1rem;
+}
+.contacto-info-icon {
+  width: 36px; height: 36px; flex-shrink: 0;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent);
+}
+.contacto-info-text {
+  font-family: var(--font-mono);
+  font-size: 0.72rem; color: var(--muted); line-height: 1.4;
+}
+.contacto-info-text strong { color: var(--text); display: block; margin-bottom: 0.1rem; }
+
+/* ── Formulario ── */
+.contacto-form {
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  padding: 3rem;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.form-group {
+  display: flex; flex-direction: column; gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.form-group:last-of-type { margin-bottom: 0; }
+
+.form-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--muted);
+}
+.form-label .required { color: var(--accent); margin-left: 0.2rem; }
+
+.form-input,
+.form-select,
+.form-textarea {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 0.9rem 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.form-input::placeholder,
+.form-textarea::placeholder { color: var(--muted); }
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--accent);
+  background: var(--bg);
+}
+.form-textarea { resize: vertical; min-height: 140px; line-height: 1.6; }
+
+.form-select-wrap { position: relative; }
+.form-select-wrap::after {
+  content: '▾';
+  position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);
+  color: var(--accent); pointer-events: none; font-size: 0.75rem;
+}
+.form-select { cursor: pointer; }
+.form-select option { background: var(--bg3); }
+
+/* ── Envío y estados ── */
+.form-footer {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem; margin-top: 2rem;
+}
+.form-note {
+  font-family: var(--font-mono);
+  font-size: 0.6rem; color: var(--muted); line-height: 1.5;
+}
+.form-submit {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  background: var(--accent); color: var(--bg);
+  padding: 1rem 2rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem; letter-spacing: 0.15em;
+  text-transform: uppercase; font-weight: 600;
+  border: none; cursor: pointer;
+  transition: all 0.3s; flex-shrink: 0;
+}
+.form-submit:hover:not(:disabled) { background: var(--text); }
+.form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+.form-submit .submit-arrow { transition: transform 0.2s; }
+.form-submit:hover:not(:disabled) .submit-arrow { transform: translateX(4px); }
+
+/* ── Mensajes de estado ── */
+.form-status {
+  display: none;
+  padding: 1rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin-top: 1.5rem;
+}
+.form-status.success {
+  display: block;
+  border-left: 2px solid var(--accent);
+  background: rgba(212,168,83,0.05);
+  color: var(--text);
+}
+.form-status.error {
+  display: block;
+  border-left: 2px solid #c0392b;
+  background: rgba(192,57,43,0.05);
+  color: #e88;
+}
+
+
+/* ── Footer ── */
+footer {
+  padding: 2.5rem 4rem;
+  border-top: 1px solid var(--border2);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 1rem;
+}
+.footer-left {
+  font-family: var(--font-display);
+  font-style: italic; font-size: 1rem;
+  font-weight: 300; color: var(--muted);
+}
+.footer-left span { color: var(--accent); }
+.footer-center {
+  font-family: var(--font-mono);
+  font-size: 0.62rem; color: var(--muted);
+  letter-spacing: 0.1em; text-align: center;
+}
+.footer-links {
+  display: flex; gap: 2rem; list-style: none;
+}
+.footer-links a {
+  font-family: var(--font-mono);
+  font-size: 0.62rem; color: var(--muted);
+  letter-spacing: 0.1em; transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--accent); }
+
+/* ── Cookie Banner ── */
+.cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  z-index: 999; background: var(--bg3);
+  border-top: 1px solid var(--border2);
+  padding: 1.25rem 4rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+}
+.cookie-banner.hidden { display: none; }
+.cookie-text {
+  font-family: var(--font-mono);
+  font-size: 0.72rem; color: var(--muted); line-height: 1.6;
+}
+.cookie-text a { color: var(--accent); }
+.cookie-actions { display: flex; gap: 0.75rem; flex-shrink: 0; }
+.cookie-btn {
+  font-family: var(--font-sans);
+  font-size: 0.65rem; letter-spacing: 0.15em;
+  text-transform: uppercase; padding: 0.6rem 1.25rem;
+  cursor: pointer; border: none; transition: all 0.2s;
+}
+.cookie-reject { background: transparent; border: 1px solid var(--border2); color: var(--muted); }
+.cookie-reject:hover { border-color: var(--muted); color: var(--text); }
+.cookie-accept { background: var(--accent); color: var(--bg); font-weight: 600; }
+.cookie-accept:hover { background: var(--text); }

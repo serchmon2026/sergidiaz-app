@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blog — IA, Agentes y Automatización | Sergio Díaz</title>
+<meta name="description" content="Artículos prácticos sobre agentes IA, automatización empresarial y desarrollo de productos de inteligencia artificial. Desde la experiencia real de construirlos en producción."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://sergidiaz.com/blog"/>
+<link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Fraunces:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#080808;--bg2:#0F0F0F;--bg3:#161616;--text:#F0EDE8;--muted:#5A5652;--accent:#D4A853;--border:rgba(212,168,83,0.12);--border2:rgba(240,237,232,0.08);--font-display:'Fraunces',serif;--font-sans:'Syne',sans-serif;--font-mono:'DM Mono',monospace}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--text);font-family:var(--font-sans);font-weight:400;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 4rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:all 0.4s}
+nav.scrolled{background:rgba(8,8,8,0.92);backdrop-filter:blur(12px);border-color:var(--border2)}
+.nav-name{font-family:var(--font-display);font-style:italic;font-weight:300;font-size:1.2rem;color:var(--text);display:flex;align-items:center;gap:0.75rem}
+.nav-name span{color:var(--accent)}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--text)}
+.nav-cta{padding:0.6rem 1.5rem;border:1px solid var(--accent);color:var(--accent)!important;font-size:0.72rem!important;letter-spacing:0.15em!important;text-transform:uppercase;transition:all 0.3s!important}
+.nav-cta:hover{background:var(--accent)!important;color:var(--bg)!important}
+
+/* Hero blog */
+.blog-hero{padding:10rem 4rem 5rem;border-bottom:1px solid var(--border2)}
+.section-label{font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem}
+.section-label::before{content:'';width:24px;height:1px;background:var(--accent)}
+.blog-title{font-family:var(--font-display);font-weight:300;font-size:clamp(2.5rem,5vw,5rem);line-height:1;letter-spacing:-0.02em;margin-bottom:1rem}
+.blog-title em{font-style:italic;color:var(--accent)}
+.blog-sub{font-family:var(--font-mono);font-size:0.82rem;color:var(--muted);line-height:1.7;max-width:560px}
+
+/* Grid artículos */
+.blog-grid{padding:6rem 4rem 8rem;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border2)}
+.article-card{background:var(--bg);padding:3rem;position:relative;overflow:hidden;transition:background 0.3s;display:block}
+.article-card:hover{background:var(--bg3)}
+.article-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--accent);transition:width 0.4s}
+.article-card:hover::after{width:100%}
+.card-meta{font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.2em;color:var(--accent);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.75rem}
+.card-dot{width:5px;height:5px;background:var(--accent);border-radius:50%}
+.card-title{font-family:var(--font-display);font-weight:300;font-size:1.6rem;color:var(--text);margin-bottom:0.5rem;line-height:1.2}
+.card-title em{font-style:italic;color:var(--accent)}
+.card-excerpt{font-size:0.82rem;line-height:1.7;color:var(--muted);margin-bottom:1.5rem}
+.card-tags{display:flex;flex-wrap:wrap;gap:0.4rem}
+.card-tag{font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.1em;padding:0.25rem 0.6rem;border:1px solid var(--border2);color:var(--muted);transition:all 0.2s}
+.article-card:hover .card-tag{border-color:var(--border);color:var(--text)}
+.card-arrow{position:absolute;top:2.5rem;right:2.5rem;font-family:var(--font-mono);font-size:0.65rem;color:var(--muted);transition:all 0.2s}
+.article-card:hover .card-arrow{color:var(--accent);transform:translate(3px,-3px)}
+
+/* CTA */
+.blog-cta{padding:6rem 4rem;border-top:1px solid var(--border2);display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.cta-title{font-family:var(--font-display);font-weight:300;font-size:clamp(1.8rem,3vw,3rem);line-height:1.2}
+.cta-title em{font-style:italic;color:var(--accent)}
+.cta-right p{font-size:0.88rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem}
+.btn-primary{display:inline-flex;align-items:center;gap:0.75rem;background:var(--accent);color:#080808;padding:1rem 2.5rem;font-family:"Syne",sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;transition:all 0.3s}
+.btn-primary:hover{background:var(--text)}
+
+footer{padding:2.5rem 4rem;border-top:1px solid var(--border2);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-left{font-family:var(--font-display);font-style:italic;font-size:1rem;font-weight:300;color:var(--muted)}
+.footer-left span{color:var(--accent)}
+.footer-links{display:flex;gap:2rem;list-style:none}
+.footer-links a{font-family:var(--font-mono);font-size:0.62rem;color:var(--muted);letter-spacing:0.1em;transition:color 0.2s}
+.footer-links a:hover{color:var(--accent)}
+@media(max-width:1024px){
+  nav{padding:1.25rem 2rem}.nav-links{display:none}
+  .blog-hero{padding:8rem 2rem 4rem}
+  .blog-grid{grid-template-columns:1fr;padding:4rem 2rem 6rem}
+  .blog-cta{grid-template-columns:1fr;gap:2rem;padding:4rem 2rem}
+  footer{padding:2rem;flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="../index.html" class="nav-name">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="30" height="30"><rect width="80" height="80" fill="#080808"/><path d="M6,6 L6,12 M6,6 L12,6" fill="none" stroke="#D4A853" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/><path d="M74,6 L74,12 M74,6 L68,6" fill="none" stroke="#D4A853" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/><path d="M6,74 L6,68 M6,74 L12,74" fill="none" stroke="#D4A853" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/><path d="M74,74 L74,68 M74,74 L68,74" fill="none" stroke="#D4A853" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/><line x1="8" y1="42" x2="32" y2="42" stroke="#D4A853" stroke-width="0.7" opacity="0.3"/><line x1="48" y1="42" x2="72" y2="42" stroke="#D4A853" stroke-width="0.7" opacity="0.3"/><circle cx="40" cy="42" r="5" fill="none" stroke="#D4A853" stroke-width="0.7" opacity="0.22"/><circle cx="40" cy="42" r="2.5" fill="#D4A853"/><text x="40" y="52" font-family="Georgia,serif" font-style="italic" font-weight="300" font-size="40" fill="#F0EDE8" text-anchor="middle" dominant-baseline="alphabetic" letter-spacing="-1.5" opacity="0.93">sd</text></svg>
+    Sergio <span>Díaz</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#proyectos">Proyectos</a></li>
+    <li><a href="../index.html#servicios">Servicios</a></li>
+    <li><a href="index.html" class="active">Blog</a></li>
+    <li><a href="../index.html#contacto" class="nav-cta">Hablemos</a></li>
+  </ul>
+</nav>
+
+<div class="blog-hero">
+  <div class="section-label">Blog</div>
+  <h1 class="blog-title">IA, Agentes y<br><em>Automatización</em></h1>
+  <p class="blog-sub">Artículos prácticos desde la experiencia de construir productos de IA reales — no demos, no teoría. Lo que aprendo cada día llevando Luca, Valentina, Senerva y Antonio en producción.</p>
+</div>
+
+<div class="blog-grid">
+
+  <!-- Artículo 1 -->
+  <a href="automatizar-whatsapp-n8n-claude-api.html" class="article-card">
+    <div class="card-meta"><div class="card-dot"></div>14 Abril 2026 · 7 min</div>
+    <div class="card-arrow">↗</div>
+    <h2 class="card-title">Cómo automatizar WhatsApp<br>con <em>n8n y Claude API</em></h2>
+    <p class="card-excerpt">La arquitectura real que uso en Luca y Valentina: webhook de Meta, n8n como orquestador, Claude como inteligencia y PostgreSQL como memoria. Con código y costes reales.</p>
+    <div class="card-tags">
+      <span class="card-tag">WhatsApp API</span>
+      <span class="card-tag">n8n</span>
+      <span class="card-tag">Claude API</span>
+      <span class="card-tag">Producción</span>
+    </div>
+  </a>
+
+  <!-- Artículo 2 -->
+  <a href="que-es-agente-ia-coste-espana.html" class="article-card">
+    <div class="card-meta"><div class="card-dot"></div>28 Abril 2026 · 6 min</div>
+    <div class="card-arrow">↗</div>
+    <h2 class="card-title">¿Qué es un agente IA<br>y cuánto cuesta en <em>España?</em></h2>
+    <p class="card-excerpt">La diferencia real entre chatbot y agente IA, qué puede hacer un agente en producción y los rangos de precio honestos para 2026. Sin marketing, con datos reales.</p>
+    <div class="card-tags">
+      <span class="card-tag">Agentes IA</span>
+      <span class="card-tag">Precios</span>
+      <span class="card-tag">España</span>
+      <span class="card-tag">Guía</span>
+    </div>
+  </a>
+
+</div>
+
+<div class="blog-cta">
+  <h2 class="cta-title">¿Tienes un proyecto<br>de <em>IA en mente?</em></h2>
+  <div class="cta-right">
+    <p>Primera conversación sin coste. Te digo honestamente si puedo ayudarte y cómo lo haría. Sin compromiso.</p>
+    <a href="../index.html#contacto" class="btn-primary">Hablemos →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-left">Flows <span>Lab</span></div>
+  <div class="footer-center" style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted)">© 2026 Sergio Díaz · Todos los derechos reservados</div>
+  <ul class="footer-links">
+    <li><a href="../privacidad.html">Privacidad</a></li>
+    <li><a href="../aviso-legal.html">Aviso legal</a></li>
+    <li><a href="../cookies.html">Cookies</a></li>
+  </ul>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>50);},{passive:true});
+})();
+</script>
+</body>
+</html>

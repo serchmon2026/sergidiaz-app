@@ -1,0 +1,28 @@
+/* ═══════════════════════════════════════════════
+   VARIABLES.CSS — Design Tokens
+   ✅ FIJO — Solo tocar si cambias la identidad visual
+   ═══════════════════════════════════════════════ */
+
+:root {
+  /* Colores */
+  --bg:       #080808;
+  --bg2:      #0F0F0F;
+  --bg3:      #161616;
+  --text:     #F0EDE8;
+  --muted:    #5A5652;
+  --accent:   #D4A853;
+  --accent2:  #8B6914;
+
+  /* Bordes */
+  --border:   rgba(212,168,83,0.12);
+  --border2:  rgba(240,237,232,0.08);
+
+  /* Tipografías */
+  --font-display: 'Fraunces', serif;
+  --font-sans:    'Syne', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+
+  /* Espaciado de sección */
+  --section-pad: 8rem 4rem;
+  --section-pad-sm: 5rem 2rem;
+}

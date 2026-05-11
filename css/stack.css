@@ -1,0 +1,37 @@
+/* ═══════════════════════════════════════════════
+   STACK.CSS — Stack tecnológico
+   🔄 ACTUALIZABLE — Añadir/quitar .stack-item en sections/stack.html
+   ═══════════════════════════════════════════════ */
+
+.stack-section {
+  padding: 6rem 4rem;
+  border-bottom: 1px solid var(--border2);
+}
+.stack-intro {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem; align-items: center;
+  margin-bottom: 4rem;
+}
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px; background: var(--border2);
+}
+.stack-item {
+  background: var(--bg);
+  padding: 1.5rem 1rem;
+  text-align: center; transition: background 0.3s;
+}
+.stack-item:hover { background: var(--bg3); }
+.stack-icon { font-size: 1.5rem; }
+.stack-item-name {
+  font-family: var(--font-mono);
+  font-size: 0.65rem; color: var(--text);
+  letter-spacing: 0.1em; display: block; margin-top: 0.5rem;
+}
+.stack-item-cat {
+  font-family: var(--font-mono);
+  font-size: 0.55rem; color: var(--muted);
+  letter-spacing: 0.1em; display: block; margin-top: 0.2rem;
+}

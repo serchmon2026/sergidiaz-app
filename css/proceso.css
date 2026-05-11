@@ -1,0 +1,37 @@
+/* ═══════════════════════════════════════════════
+   PROCESO.CSS — Sección de proceso de trabajo
+   ✅ FIJO
+   ═══════════════════════════════════════════════ */
+
+.proceso {
+  padding: var(--section-pad);
+  border-bottom: 1px solid var(--border2);
+}
+.proceso-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: var(--border2);
+  margin-top: 4rem;
+}
+.proceso-step {
+  background: var(--bg);
+  padding: 3rem 2rem; position: relative;
+}
+.step-num {
+  font-family: var(--font-display);
+  font-style: italic; font-size: 4rem;
+  font-weight: 300; color: var(--accent);
+  line-height: 1; margin-bottom: 1.5rem; opacity: 0.6;
+}
+.step-title {
+  font-size: 1rem; font-weight: 600;
+  color: var(--text); margin-bottom: 0.75rem; letter-spacing: 0.05em;
+}
+.step-desc {
+  font-size: 0.8rem; line-height: 1.7; color: var(--muted);
+}
+.step-duration {
+  font-family: var(--font-mono);
+  font-size: 0.6rem; color: var(--accent);
+  letter-spacing: 0.15em; margin-top: 1.5rem; text-transform: uppercase;
+}

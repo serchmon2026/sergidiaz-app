@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#D4A853" stroke-width="0.4" stroke-opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1200" height="630" fill="#080808"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Borde exterior -->
+  <rect x="18" y="18" width="1164" height="594" fill="none" stroke="#D4A853" stroke-width="0.7" stroke-opacity="0.2"/>
+
+  <!-- Escuadras en esquinas -->
+  <path d="M40,40 L40,62 M40,40 L62,40"       fill="none" stroke="#D4A853" stroke-width="1.2" stroke-linecap="round" opacity="0.45"/>
+  <path d="M1160,40 L1160,62 M1160,40 L1138,40" fill="none" stroke="#D4A853" stroke-width="1.2" stroke-linecap="round" opacity="0.45"/>
+  <path d="M40,590 L40,568 M40,590 L62,590"     fill="none" stroke="#D4A853" stroke-width="1.2" stroke-linecap="round" opacity="0.45"/>
+  <path d="M1160,590 L1160,568 M1160,590 L1138,590" fill="none" stroke="#D4A853" stroke-width="1.2" stroke-linecap="round" opacity="0.45"/>
+
+  <!-- ── IZQUIERDA: Logo grande ── -->
+  <!-- Línea de precisión -->
+  <line x1="55"  y1="290" x2="200" y2="290" stroke="#D4A853" stroke-width="1" opacity="0.25"/>
+  <line x1="290" y1="290" x2="460" y2="290" stroke="#D4A853" stroke-width="1" opacity="0.25"/>
+
+  <!-- Nodo central logo -->
+  <circle cx="245" cy="290" r="18" fill="none" stroke="#D4A853" stroke-width="0.8" opacity="0.18"/>
+  <circle cx="245" cy="290" r="8"  fill="#D4A853" filter="url(#glow)"/>
+
+  <!-- sd grande -->
+  <text x="245" y="360"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-style="italic" font-weight="300" font-size="260"
+    fill="#F0EDE8" text-anchor="middle" dominant-baseline="alphabetic"
+    letter-spacing="-8" opacity="0.92">sd</text>
+
+  <!-- Tag Flows Lab -->
+  <text x="245" y="430"
+    font-family="'Courier New', Courier, monospace"
+    font-size="14" fill="#D4A853" text-anchor="middle"
+    letter-spacing="8" opacity="0.45">FLOWS LAB</text>
+
+  <!-- Divisor vertical -->
+  <line x1="520" y1="60" x2="520" y2="570" stroke="#D4A853" stroke-width="0.6" stroke-opacity="0.12"/>
+
+  <!-- ── DERECHA: Info ── -->
+
+  <!-- Nombre -->
+  <text x="580" y="160"
+    font-family="'Courier New', Courier, monospace"
+    font-size="12" fill="#D4A853" letter-spacing="4" opacity="0.6">SERGIO DÍAZ</text>
+
+  <text x="580" y="240"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-style="italic" font-weight="300" font-size="72"
+    fill="#F0EDE8" letter-spacing="-2" opacity="0.95">AI Product</text>
+
+  <text x="580" y="318"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-style="italic" font-weight="300" font-size="72"
+    fill="#D4A853" letter-spacing="-2">Builder</text>
+
+  <!-- Línea divisora -->
+  <line x1="580" y1="348" x2="1140" y2="348" stroke="#F0EDE8" stroke-width="0.5" stroke-opacity="0.1"/>
+
+  <!-- Proyectos -->
+  <text x="580" y="386"
+    font-family="'Courier New', Courier, monospace"
+    font-size="11" fill="#5A5652" letter-spacing="3">PRODUCTOS EN PRODUCCIÓN</text>
+
+  <!-- Cards de proyectos -->
+  <g transform="translate(580, 402)">
+    <!-- Luca -->
+    <rect x="0"   y="0" width="130" height="50" fill="#0F0F0F" stroke="#D4A853" stroke-width="0.5" stroke-opacity="0.2"/>
+    <rect x="0"   y="0" width="2"   height="50" fill="#D4A853"/>
+    <text x="12"  y="20" font-family="Georgia, serif" font-style="italic" font-size="16" fill="#F0EDE8">Luca</text>
+    <text x="12"  y="38" font-family="'Courier New', monospace" font-size="9" fill="#5A5652" letter-spacing="0.5">Asistente IA · WA</text>
+    <circle cx="118" cy="12" r="3" fill="#D4A853" opacity="0.7"/>
+
+    <!-- Valentina -->
+    <rect x="140" y="0" width="140" height="50" fill="#0F0F0F" stroke="#D4A853" stroke-width="0.5" stroke-opacity="0.2"/>
+    <rect x="140" y="0" width="2"   height="50" fill="#D4A853"/>
+    <text x="152" y="20" font-family="Georgia, serif" font-style="italic" font-size="16" fill="#F0EDE8">Valentina</text>
+    <text x="152" y="38" font-family="'Courier New', monospace" font-size="9" fill="#5A5652" letter-spacing="0.5">Asistente IA · WA</text>
+    <circle cx="268" cy="12" r="3" fill="#D4A853" opacity="0.7"/>
+
+    <!-- Senerva -->
+    <rect x="290" y="0" width="130" height="50" fill="#0F0F0F" stroke="#D4A853" stroke-width="0.5" stroke-opacity="0.2"/>
+    <rect x="290" y="0" width="2"   height="50" fill="#D4A853"/>
+    <text x="302" y="20" font-family="Georgia, serif" font-style="italic" font-size="16" fill="#F0EDE8">Senerva</text>
+    <text x="302" y="38" font-family="'Courier New', monospace" font-size="9" fill="#5A5652" letter-spacing="0.5">Bienestar · IA</text>
+    <circle cx="408" cy="12" r="3" fill="#D4A853" opacity="0.7"/>
+
+    <!-- Antonio -->
+    <rect x="430" y="0" width="130" height="50" fill="#0F0F0F" stroke="#D4A853" stroke-width="0.5" stroke-opacity="0.2"/>
+    <rect x="430" y="0" width="2"   height="50" fill="#D4A853"/>
+    <text x="442" y="20" font-family="Georgia, serif" font-style="italic" font-size="16" fill="#F0EDE8">Antonio</text>
+    <text x="442" y="38" font-family="'Courier New', monospace" font-size="9" fill="#5A5652" letter-spacing="0.5">Agente · Empresas</text>
+    <circle cx="548" cy="12" r="3" fill="#D4A853" opacity="0.7"/>
+  </g>
+
+  <!-- URL -->
+  <text x="580" y="535"
+    font-family="'Courier New', Courier, monospace"
+    font-size="16" fill="#3A3632" letter-spacing="2">sergidiaz.com</text>
+</svg>

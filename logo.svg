@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="400" height="400" fill="#080808"/>
+
+  <!-- Marcas de escuadra — 4 esquinas -->
+  <path d="M32,32 L32,52 M32,32 L52,32"     fill="none" stroke="#D4A853" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M368,32 L368,52 M368,32 L348,32"  fill="none" stroke="#D4A853" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M32,368 L32,348 M32,368 L52,368"  fill="none" stroke="#D4A853" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M368,368 L368,348 M368,368 L348,368" fill="none" stroke="#D4A853" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Línea de precisión — izquierda y derecha del nodo -->
+  <line x1="48"  y1="210" x2="170" y2="210" stroke="#D4A853" stroke-width="0.9" opacity="0.28"/>
+  <line x1="230" y1="210" x2="352" y2="210" stroke="#D4A853" stroke-width="0.9" opacity="0.28"/>
+
+  <!-- Nodo central -->
+  <circle cx="200" cy="210" r="13" fill="none" stroke="#D4A853" stroke-width="0.8" opacity="0.2"/>
+  <circle cx="200" cy="210" r="6.5" fill="#D4A853" filter="url(#glow)"/>
+
+  <!-- sd tipográfico -->
+  <text
+    x="200" y="248"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-style="italic"
+    font-weight="300"
+    font-size="200"
+    fill="#F0EDE8"
+    text-anchor="middle"
+    dominant-baseline="alphabetic"
+    letter-spacing="-6"
+    opacity="0.93">sd</text>
+
+  <!-- Tag Flows Lab -->
+  <text
+    x="200" y="334"
+    font-family="'Courier New', Courier, monospace"
+    font-size="13"
+    fill="#D4A853"
+    text-anchor="middle"
+    letter-spacing="7"
+    opacity="0.48">FLOWS LAB</text>
+
+  <!-- Línea bajo el tag -->
+  <line x1="128" y1="346" x2="272" y2="346" stroke="#D4A853" stroke-width="0.6" opacity="0.16"/>
+</svg>

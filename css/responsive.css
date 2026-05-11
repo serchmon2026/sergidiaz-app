@@ -1,0 +1,56 @@
+/* ═══════════════════════════════════════════════
+   RESPONSIVE.CSS — Media Queries
+   ✅ FIJO — Siempre el último en cargarse
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  /* Nav */
+  nav { padding: 1.25rem 2rem; }
+  .nav-links { display: none; }
+  .nav-mobile { display: flex; align-items: center; gap: 1rem; }
+
+  /* Hero */
+  .hero { padding: 0 2rem 5rem; }
+  .hero-subtitle-row { flex-direction: column; align-items: flex-start; gap: 2rem; }
+
+  /* Propuesta */
+  .propuesta { grid-template-columns: 1fr; gap: 3rem; padding: var(--section-pad-sm); }
+
+  /* Proyectos */
+  .proyectos { padding: var(--section-pad-sm); }
+  .projects-grid { grid-template-columns: 1fr; }
+
+  /* Servicios */
+  .servicios { padding: var(--section-pad-sm); }
+  .servicios-grid { grid-template-columns: 1fr; }
+
+  /* Stack */
+  .stack-section { padding: 4rem 2rem; }
+  .stack-intro { grid-template-columns: 1fr; gap: 2rem; }
+  .stack-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* Proceso */
+  .proceso { padding: var(--section-pad-sm); }
+  .proceso-steps { grid-template-columns: repeat(2, 1fr); }
+
+  /* Contacto */
+  .contacto { padding: 6rem 2rem; }
+  .contacto-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .contacto-form { padding: 2rem; }
+  .form-footer { flex-direction: column; align-items: flex-start; }
+
+  /* Footer */
+  footer { padding: 2rem; flex-direction: column; text-align: center; }
+
+  /* Cookie Banner */
+  .cookie-banner { padding: 1.25rem 2rem; flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 640px) {
+  .stats-row { flex-direction: column; gap: 1.5rem; }
+  .hero-actions { flex-direction: column; width: 100%; }
+  .btn-primary, .btn-secondary { justify-content: center; }
+  .stack-grid { grid-template-columns: repeat(2, 1fr); }
+  .proceso-steps { grid-template-columns: 1fr; }
+}

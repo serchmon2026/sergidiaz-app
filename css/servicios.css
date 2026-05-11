@@ -1,0 +1,59 @@
+/* ═══════════════════════════════════════════════
+   SERVICIOS.CSS — Tarjetas de servicios
+   ✅ FIJO (los items de lista sí se pueden editar en sections/servicios.html)
+   ═══════════════════════════════════════════════ */
+
+.servicios {
+  padding: var(--section-pad);
+  border-bottom: 1px solid var(--border2);
+}
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border2);
+  margin-top: 4rem;
+}
+.servicio-card {
+  background: var(--bg);
+  padding: 3rem 2.5rem;
+  position: relative; overflow: hidden;
+}
+.servicio-num {
+  font-family: var(--font-display);
+  font-style: italic; font-size: 5rem;
+  font-weight: 300; color: rgba(212,168,83,0.08);
+  position: absolute; top: 1.5rem; right: 1.5rem;
+  line-height: 1; pointer-events: none;
+  transition: color 0.3s;
+}
+.servicio-card:hover .servicio-num { color: rgba(212,168,83,0.15); }
+
+.servicio-icon {
+  width: 48px; height: 48px;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 2rem; color: var(--accent);
+  transition: all 0.3s;
+}
+.servicio-card:hover .servicio-icon { background: var(--accent); color: var(--bg); }
+
+.servicio-title {
+  font-family: var(--font-display);
+  font-weight: 300; font-size: 1.5rem;
+  color: var(--text); margin-bottom: 0.75rem; line-height: 1.2;
+}
+.servicio-desc {
+  font-size: 0.82rem; line-height: 1.7;
+  color: var(--muted); margin-bottom: 1.5rem;
+}
+.servicio-items {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
+.servicio-items li {
+  font-family: var(--font-mono);
+  font-size: 0.68rem; color: var(--muted);
+  display: flex; align-items: center; gap: 0.6rem;
+  letter-spacing: 0.05em;
+}
+.servicio-items li::before { content: '→'; color: var(--accent); }

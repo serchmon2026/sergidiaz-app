@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Cómo automatizar WhatsApp para empresas con n8n y Claude API | Sergio Díaz</title>
+<meta name="description" content="Guía práctica para automatizar WhatsApp Business con n8n y la API de Claude. Aprende cómo construir un agente IA conversacional real en producción — desde la arquitectura hasta el despliegue."/>
+<meta name="keywords" content="automatizar WhatsApp empresas, n8n WhatsApp Business API, Claude API WhatsApp, agente IA WhatsApp, automatización WhatsApp n8n, chatbot WhatsApp IA"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://sergidiaz.com/blog/automatizar-whatsapp-n8n-claude-api"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Cómo automatizar WhatsApp para empresas con n8n y Claude API"/>
+<meta property="og:description" content="Guía práctica para construir un agente IA en WhatsApp Business con n8n y Claude API. Arquitectura real, no demos."/>
+<meta property="og:url" content="https://sergidiaz.com/blog/automatizar-whatsapp-n8n-claude-api"/>
+<meta property="og:image" content="https://sergidiaz.com/og-image.svg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cómo automatizar WhatsApp para empresas con n8n y Claude API",
+  "description": "Guía práctica para construir un agente IA en WhatsApp Business con n8n y Claude API.",
+  "author": {"@type": "Person", "name": "Sergio Díaz", "url": "https://sergidiaz.com"},
+  "publisher": {"@type": "Organization", "name": "Flows Lab", "url": "https://sergidiaz.com"},
+  "datePublished": "2026-04-14",
+  "dateModified": "2026-04-14",
+  "mainEntityOfPage": "https://sergidiaz.com/blog/automatizar-whatsapp-n8n-claude-api"
+}</script>
+<link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Fraunces:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#080808;--bg2:#0F0F0F;--bg3:#161616;--text:#F0EDE8;--muted:#5A5652;--accent:#D4A853;--border:rgba(212,168,83,0.12);--border2:rgba(240,237,232,0.08);--font-display:'Fraunces',serif;--font-sans:'Syne',sans-serif;--font-mono:'DM Mono',monospace}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--text);font-family:var(--font-sans);font-weight:400;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 4rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:all 0.4s}
+nav.scrolled{background:rgba(8,8,8,0.92);backdrop-filter:blur(12px);border-color:var(--border2)}
+.nav-name{font-family:var(--font-display);font-style:italic;font-weight:300;font-size:1.2rem;color:var(--text);display:flex;align-items:center;gap:0.75rem}
+.nav-name span{color:var(--accent)}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{padding:0.6rem 1.5rem;border:1px solid var(--accent);color:var(--accent)!important;font-size:0.72rem!important;letter-spacing:0.15em!important;text-transform:uppercase;transition:all 0.3s!important}
+.nav-cta:hover{background:var(--accent)!important;color:var(--bg)!important}
+
+/* HERO ARTÍCULO */
+.article-hero{padding:10rem 4rem 4rem;border-bottom:1px solid var(--border2);max-width:860px;margin:0 auto}
+.article-meta{font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.2em;color:var(--accent);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem}
+.article-meta::before{content:'';width:24px;height:1px;background:var(--accent)}
+.article-title{font-family:var(--font-display);font-weight:300;font-size:clamp(2rem,4vw,3.5rem);line-height:1.1;letter-spacing:-0.02em;margin-bottom:1.25rem}
+.article-title em{font-style:italic;color:var(--accent)}
+.article-intro{font-size:1rem;line-height:1.8;color:var(--muted);max-width:680px}
+.article-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem}
+.tag{font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;padding:0.3rem 0.8rem;border:1px solid var(--border2);color:var(--muted)}
+
+/* CUERPO ARTÍCULO */
+.article-body{max-width:720px;margin:0 auto;padding:4rem 4rem 8rem}
+.article-body h2{font-family:var(--font-display);font-weight:300;font-size:1.8rem;color:var(--text);margin:3rem 0 1.25rem;line-height:1.2}
+.article-body h2 em{font-style:italic;color:var(--accent)}
+.article-body h3{font-family:var(--font-sans);font-weight:600;font-size:1rem;color:var(--text);margin:2rem 0 0.75rem;letter-spacing:0.05em}
+.article-body p{font-size:0.92rem;line-height:1.9;color:var(--muted);margin-bottom:1.25rem}
+.article-body p strong{color:var(--text);font-weight:500}
+.article-body ul{list-style:none;margin:1rem 0 1.5rem;display:flex;flex-direction:column;gap:0.6rem}
+.article-body ul li{font-family:var(--font-mono);font-size:0.8rem;color:var(--muted);padding-left:1.5rem;position:relative;line-height:1.6}
+.article-body ul li::before{content:'→';color:var(--accent);position:absolute;left:0}
+.article-body ul li strong{color:var(--text)}
+.article-body a{color:var(--accent);border-bottom:1px solid rgba(212,168,83,0.3);transition:border-color 0.2s}
+.article-body a:hover{border-color:var(--accent)}
+
+/* Bloque de código */
+.code-block{background:var(--bg3);border:1px solid var(--border2);border-left:2px solid var(--accent);padding:1.5rem;margin:1.5rem 0;font-family:var(--font-mono);font-size:0.75rem;color:var(--text);line-height:1.7;overflow-x:auto}
+
+/* Bloque destacado */
+.highlight-block{background:var(--bg3);border-left:2px solid var(--accent);padding:1.25rem 1.5rem;margin:2rem 0}
+.highlight-block p{font-size:0.85rem!important;margin-bottom:0!important;color:var(--text)!important}
+
+/* CTA */
+.article-cta{background:var(--bg3);border:1px solid var(--border2);padding:3rem;margin:4rem 0 0;text-align:center}
+.article-cta h3{font-family:var(--font-display);font-weight:300;font-size:1.8rem;margin-bottom:0.75rem}
+.article-cta h3 em{font-style:italic;color:var(--accent)}
+.article-cta p{font-size:0.85rem;color:var(--muted);margin-bottom:2rem;line-height:1.7}
+.btn-primary{display:inline-flex;align-items:center;gap:0.75rem;background:var(--accent);color:#080808;padding:1rem 2.5rem;font-family:"Syne",sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;transition:all 0.3s}
+.btn-primary:hover{background:var(--text)}.article-body a.btn-primary,.article-cta a.btn-primary{color:#080808!important;border-bottom:none!important;text-decoration:none!important}
+
+/* Back link */
+.back-link{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--font-mono);font-size:0.68rem;color:var(--muted);letter-spacing:0.1em;margin-bottom:3rem;transition:color 0.2s}
+.back-link:hover{color:var(--accent)}
+
+/* FOOTER */
+footer{padding:2.5rem 4rem;border-top:1px solid var(--border2);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-left{font-family:var(--font-display);font-style:italic;font-size:1rem;font-weight:300;color:var(--muted)}
+.footer-left span{color:var(--accent)}
+.footer-links{display:flex;gap:2rem;list-style:none}
+.footer-links a{font-family:var(--font-mono);font-size:0.62rem;color:var(--muted);letter-spacing:0.1em;transition:color 0.2s}
+.footer-links a:hover{color:var(--accent)}
+
+@media(max-width:1024px){
+  nav{padding:1.25rem 2rem}
+  .nav-links{display:none}
+  .article-hero{padding:8rem 2rem 3rem}
+  .article-body{padding:3rem 2rem 6rem}
+  footer{padding:2rem;flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="../index.html" class="nav-name">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="30" height="30"><rect width="80" height="80" fill="#080808"/><path d="M6,6 L6,12 M6,6 L12,6" fill="none" stroke="#D4A853" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/><path d="M74,6 L74,12 M74,6 L68,6" fill="none" stroke="#D4A853" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/><path d="M6,74 L6,68 M6,74 L12,74" fill="none" stroke="#D4A853" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/><path d="M74,74 L74,68 M74,74 L68,74" fill="none" stroke="#D4A853" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/><line x1="8" y1="42" x2="32" y2="42" stroke="#D4A853" stroke-width="0.7" opacity="0.3"/><line x1="48" y1="42" x2="72" y2="42" stroke="#D4A853" stroke-width="0.7" opacity="0.3"/><circle cx="40" cy="42" r="5" fill="none" stroke="#D4A853" stroke-width="0.7" opacity="0.22"/><circle cx="40" cy="42" r="2.5" fill="#D4A853"/><text x="40" y="52" font-family="Georgia,serif" font-style="italic" font-weight="300" font-size="40" fill="#F0EDE8" text-anchor="middle" dominant-baseline="alphabetic" letter-spacing="-1.5" opacity="0.93">sd</text></svg>
+    Sergio <span>Díaz</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#proyectos">Proyectos</a></li>
+    <li><a href="../index.html#servicios">Servicios</a></li>
+    <li><a href="index.html">Blog</a></li>
+    <li><a href="../index.html#contacto" class="nav-cta">Hablemos</a></li>
+  </ul>
+</nav>
+
+<div class="article-hero">
+  <div class="article-meta">Blog · 14 Abril 2026 · 7 min lectura</div>
+  <h1 class="article-title">Cómo automatizar WhatsApp<br>para empresas con <em>n8n y Claude API</em></h1>
+  <p class="article-intro">La mayoría de los tutoriales de WhatsApp + IA muestran demos que nunca llegan a producción. Este artículo es diferente: es la arquitectura real que uso en Luca y Valentina, dos asistentes personales con usuarios de pago activos.</p>
+  <div class="article-tags">
+    <span class="tag">WhatsApp Business API</span>
+    <span class="tag">n8n</span>
+    <span class="tag">Claude API</span>
+    <span class="tag">Agentes IA</span>
+    <span class="tag">Automatización</span>
+  </div>
+</div>
+
+<div class="article-body">
+  <a href="index.html" class="back-link">← Volver al blog</a>
+
+  <h2>Por qué WhatsApp y no otra app</h2>
+  <p>Cuando una empresa me pregunta por dónde empezar con IA conversacional, casi siempre la respuesta es WhatsApp. No por moda — por datos. España tiene una tasa de penetración de WhatsApp superior al 90% en adultos. Tu cliente ya lo usa, ya lo tiene instalado, ya sabe cómo funciona. No tienes que convencerle de nada.</p>
+  <p>Un agente en WhatsApp no necesita app propia, no necesita onboarding complicado y funciona en cualquier dispositivo. El coste de adquisición es casi cero comparado con una app nativa.</p>
+
+  <h2>Los tres componentes de la <em>arquitectura</em></h2>
+  <p>Un agente IA en WhatsApp tiene tres piezas que deben encajar perfectamente:</p>
+  <ul>
+    <li><strong>WhatsApp Business API (Meta)</strong> — el canal. Gestiona la recepción y envío de mensajes. Necesitas una cuenta de Meta for Developers y un número de teléfono dedicado.</li>
+    <li><strong>n8n</strong> — el cerebro orquestador. Recibe el webhook de Meta, procesa la lógica, llama a la IA y devuelve la respuesta. Es tu capa de automatización y memoria.</li>
+    <li><strong>Claude API (Anthropic)</strong> — la inteligencia. Procesa el mensaje, entiende el contexto y genera una respuesta natural. Claude es especialmente bueno siguiendo instrucciones complejas sin alucinaciones.</li>
+  </ul>
+
+  <h2>El flujo paso a paso</h2>
+
+  <h3>1. Configura el webhook de Meta</h3>
+  <p>Meta envía cada mensaje entrante a una URL (tu webhook). En n8n creas un nodo <strong>Webhook</strong> con método POST y esa URL la registras en el panel de Meta for Developers, en la configuración de tu app de WhatsApp Business.</p>
+  <div class="code-block">
+URL webhook: https://tu-n8n.com/webhook/whatsapp-entrada
+Método: POST
+Token verificación: [genera uno aleatorio y guárdalo]
+  </div>
+
+  <h3>2. Parsea el mensaje entrante</h3>
+  <p>Meta envía un JSON con bastante ruido. Lo primero que hace tu workflow de n8n es extraer lo que importa: el número de teléfono del remitente, el texto del mensaje y el timestamp.</p>
+  <div class="code-block">
+// Nodo Function en n8n
+const body = $input.first().json.body;
+const entry = body.entry[0].changes[0].value;
+const message = entry.messages[0];
+
+return {
+  phone: message.from,
+  text: message.text.body,
+  timestamp: message.timestamp
+};
+  </div>
+
+  <h3>3. Recupera el historial de conversación</h3>
+  <p>Aquí está la diferencia entre un chatbot básico y un agente real. <strong>El agente recuerda</strong>. Guarda cada mensaje en PostgreSQL con el número de teléfono como identificador y recupera los últimos N mensajes antes de llamar a la IA. Así el agente mantiene el contexto de la conversación.</p>
+
+  <h3>4. Llama a Claude API con el contexto</h3>
+  <p>El nodo HTTP de n8n hace la llamada a la API de Anthropic con el historial como contexto y el mensaje nuevo como último turno del usuario.</p>
+  <div class="code-block">
+POST https://api.anthropic.com/v1/messages
+Authorization: x-api-key: TU_API_KEY
+anthropic-version: 2023-06-01
+
+{
+  "model": "claude-sonnet-4-20250514",
+  "max_tokens": 1024,
+  "system": "Eres [nombre del asistente]. Tu objetivo es...",
+  "messages": [
+    ...historial_previo,
+    {"role": "user", "content": "mensaje_del_usuario"}
+  ]
+}
+  </div>
+
+  <h3>5. Envía la respuesta por WhatsApp</h3>
+  <p>Con la respuesta de Claude, haces otra llamada HTTP a la API de Meta para enviar el mensaje al número de origen.</p>
+  <div class="code-block">
+POST https://graph.facebook.com/v18.0/{PHONE_ID}/messages
+Authorization: Bearer {TOKEN}
+
+{
+  "messaging_product": "whatsapp",
+  "to": "{phone_number}",
+  "type": "text",
+  "text": {"body": "{respuesta_de_claude}"}
+}
+  </div>
+
+  <h2>Lo que aprendo cada día en <em>producción real</em></h2>
+  <p>Llevar Luca y Valentina con usuarios de pago me ha enseñado cosas que no aparecen en ningún tutorial:</p>
+  <ul>
+    <li><strong>Gestiona los duplicados de webhook</strong> — Meta a veces envía el mismo mensaje dos veces. Guarda el message_id y descarta duplicados antes de procesarlos.</li>
+    <li><strong>Timeouts de 20 segundos</strong> — Meta espera como máximo 20 segundos tu respuesta al webhook o lo marca como fallido. Si Claude tarda más (raro pero pasa), responde primero con un mensaje de espera y envía la respuesta real después.</li>
+    <li><strong>Limita el historial</strong> — Enviar toda la conversación a Claude se vuelve costoso y lento. Los últimos 10-15 mensajes son suficientes para el 99% de los casos.</li>
+    <li><strong>Separa los workflows por número</strong> — Si tienes más de un asistente (como yo con Luca y Valentina), usa un único webhook de entrada con routing inteligente por número de teléfono.</li>
+  </ul>
+
+  <h2>Cuánto cuesta en producción</h2>
+  <p>La pregunta que siempre hacen. Con un volumen medio-bajo (1.000 mensajes/mes por usuario activo):</p>
+  <ul>
+    <li><strong>WhatsApp Business API</strong> — gratuito hasta 1.000 conversaciones/mes, luego ~0,05€ por conversación de servicio.</li>
+    <li><strong>Claude API</strong> — con claude-sonnet ~0,003€ por mensaje estándar. 10.000 mensajes al mes son unos 30€.</li>
+    <li><strong>n8n self-hosted</strong> — gratuito si lo montas en tu propio VPS (5-10€/mes un VPS básico).</li>
+    <li><strong>PostgreSQL</strong> — incluido en el VPS.</li>
+  </ul>
+  <p>El coste real de un agente en producción para 100 usuarios activos es <strong>menos de 80€ al mes</strong> en infraestructura.</p>
+
+  <div class="highlight-block">
+    <p><strong>Conclusión:</strong> La arquitectura WhatsApp + n8n + Claude es la más rápida de llevar a producción, la más barata de mantener y la que mejor funciona en el mercado español. No necesitas ser desarrollador experto — necesitas entender el flujo y tener el tiempo de montarlo bien desde el principio.</p>
+  </div>
+
+  <div class="article-cta">
+    <h3>¿Quieres un agente en WhatsApp<br>para tu <em>empresa?</em></h3>
+    <p>He construido esta arquitectura en producción con usuarios reales.<br>Te digo honestamente si encaja con lo que necesitas y cuánto costaría.</p>
+    <a href="../index.html#contacto" class="btn-primary">Hablemos →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-left">Flows <span>Lab</span></div>
+  <div class="footer-center" style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted)">© 2026 Sergio Díaz · Todos los derechos reservados</div>
+  <ul class="footer-links">
+    <li><a href="../privacidad.html">Privacidad</a></li>
+    <li><a href="../aviso-legal.html">Aviso legal</a></li>
+    <li><a href="../cookies.html">Cookies</a></li>
+  </ul>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>50);},{passive:true});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+/* ═══════════════════════════════════════════════
+   HERO.CSS — Hero + Ticker
+   ✅ FIJO (el texto del ticker sí se puede actualizar en index.html)
+   ═══════════════════════════════════════════════ */
+
+/* ── Hero ── */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 0 4rem 6rem;
+  position: relative; overflow: hidden;
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(212,168,83,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,168,83,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+}
+.hero-glow {
+  position: absolute;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(212,168,83,0.06) 0%, transparent 70%);
+  top: 10%; right: -100px;
+  pointer-events: none;
+}
+.hero-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem; letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  display: flex; align-items: center; gap: 1rem;
+  animation: fadeUp 0.8s ease both;
+}
+.hero-label::before {
+  content: ''; width: 40px; height: 1px; background: var(--accent);
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(4rem, 10vw, 9rem);
+  line-height: 0.95; letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 1rem;
+  animation: fadeUp 0.8s 0.1s ease both;
+}
+.hero-title em { font-style: italic; color: var(--accent); }
+
+.hero-subtitle-row {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 4rem;
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+.hero-role {
+  font-family: var(--font-mono);
+  font-size: 0.85rem; color: var(--muted);
+  line-height: 1.6; max-width: 420px;
+}
+.hero-role strong {
+  color: var(--text); font-weight: 400;
+  display: block; font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-sans);
+}
+.hero-actions { display: flex; gap: 1.25rem; flex-shrink: 0; }
+
+/* ── Ticker ── */
+.ticker {
+  background: var(--accent);
+  padding: 0.85rem 0;
+  overflow: hidden; white-space: nowrap;
+}
+.ticker-inner {
+  display: inline-flex; gap: 0;
+  animation: ticker 25s linear infinite;
+}
+.ticker-item {
+  font-family: var(--font-mono);
+  font-size: 0.72rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--bg);
+  padding: 0 3rem;
+}
+.ticker-sep { color: rgba(8,8,8,0.4); }

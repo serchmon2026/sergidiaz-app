@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sergio Díaz | AI Product Builder & Consultor IA · Barcelona</title>
+<meta name="description" content="Sergio Díaz — Fundador de Luca, Valentina y Senerva. Desarrollo de agentes IA, automatizaciones y productos de inteligencia artificial en producción. Viladecans, Barcelona."/>
+<meta name="keywords" content="consultor IA Barcelona, desarrollador agentes IA, automatización empresas IA, AI product builder España, asistentes IA WhatsApp, n8n automatización, agentes IA producción"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://sergidiaz.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Sergio Díaz | AI Product Builder & Consultor IA"/>
+<meta property="og:description" content="Fundador de Luca, Valentina y Senerva. Agentes IA y automatizaciones en producción. Barcelona."/>
+<meta property="og:url" content="https://sergidiaz.com/"/>
+<meta property="og:image" content="https://sergidiaz.com/og-image.svg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Sergio Díaz | AI Product Builder"/>
+<meta name="twitter:description" content="Fundador de Luca, Valentina y Senerva. Agentes IA en producción. Barcelona."/>
+<meta name="twitter:image" content="https://sergidiaz.com/og-image.svg"/>
+<meta name="google-site-verification" content="PEGA_AQUI_TU_CODIGO_GSC"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+<link rel="sitemap" type="application/xml" href="sitemap.xml"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Sergio Díaz","jobTitle":"AI Product Builder & Consultor IA","url":"https://sergidiaz.com","email":"hello@sergidiaz.com","address":{"@type":"PostalAddress","addressLocality":"Viladecans","addressRegion":"Barcelona","addressCountry":"ES"},"worksFor":{"@type":"Organization","name":"Flows Lab","url":"https://flowslabapp.com"},"knowsAbout":["Inteligencia Artificial","Agentes IA","Automatización","n8n","Claude API","WhatsApp Business API","Desarrollo de productos IA"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Fraunces:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet"/>
+<style>
+/* ═══════════════════════════════════════════════
+   VARIABLES.CSS — Design Tokens
+   ✅ FIJO — Solo tocar si cambias la identidad visual
+   ═══════════════════════════════════════════════ */
+
+:root {
+  /* Colores */
+  --bg:       #080808;
+  --bg2:      #0F0F0F;
+  --bg3:      #161616;
+  --text:     #F0EDE8;
+  --muted:    #5A5652;
+  --accent:   #D4A853;
+  --accent2:  #8B6914;
+
+  /* Bordes */
+  --border:   rgba(212,168,83,0.12);
+  --border2:  rgba(240,237,232,0.08);
+
+  /* Tipografías */
+  --font-display: 'Fraunces', serif;
+  --font-sans:    'Syne', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+
+  /* Espaciado de sección */
+  --section-pad: 8rem 4rem;
+  --section-pad-sm: 5rem 2rem;
+}
+/* ═══════════════════════════════════════════════
+   BASE.CSS — Reset, Body, Utilidades globales
+   ✅ FIJO
+   ═══════════════════════════════════════════════ */
+
+*, *::before, *::after {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+section { position: relative; z-index: 1; }
+
+/* ── Ruido de fondo ── */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0; opacity: 0.4;
+}
+
+/* ── Etiquetas de sección ── */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.section-label::before {
+  content: '';
+  width: 24px; height: 1px;
+  background: var(--accent);
+}
+
+/* ── Títulos de sección ── */
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+}
+.section-title em { font-style: italic; color: var(--accent); }
+
+.section-header {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+/* ── Botones ── */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  background: var(--accent); color: var(--bg);
+  padding: 1rem 2.5rem;
+  font-size: 0.75rem; letter-spacing: 0.15em;
+  text-transform: uppercase; font-weight: 600;
+  transition: all 0.3s;
+}
+.btn-primary:hover { background: var(--text); }
+
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  border: 1px solid var(--border2); color: var(--muted);
+  padding: 1rem 2.5rem;
+  font-size: 0.75rem; letter-spacing: 0.15em;
+  text-transform: uppercase; transition: all 0.3s;
+}
+.btn-secondary:hover { border-color: var(--text); color: var(--text); }
+
+/* ── Animaciones ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Reveal on scroll ── */
+.reveal {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+/* ═══════════════════════════════════════════════
+   NAV.CSS — Navegación
+   ✅ FIJO
+   ═══════════════════════════════════════════════ */
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.5rem 4rem;
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid transparent;
+  transition: all 0.4s;
+}
+nav.scrolled {
+  background: rgba(8,8,8,0.92);
+  backdrop-filter: blur(12px);
+  border-color: var(--border2);
+}
+.nav-name {
+  font-family: var(--font-display);
+  font-style: italic; font-weight: 300;
+  font-size: 1.2rem; letter-spacing: 0.02em;
+  color: var(--text);
+}
+.nav-name span { color: var(--accent); }
+
+.nav-links {
+  display: flex; gap: 2.5rem;
+  list-style: none; align-items: center;
+}
+.nav-links a {
+  font-size: 0.72rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--muted);
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text); }
+
+.nav-cta {
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--accent);
+  color: var(--accent) !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase;
+  transition: all 0.3s !important;
+}
+.nav-cta:hover { background: var(--accent) !important; color: var(--bg) !important; }
+
+.nav-mobile { display: none; }
+/* ═══════════════════════════════════════════════
+   HERO.CSS — Hero + Ticker
+   ✅ FIJO (el texto del ticker sí se puede actualizar en index.html)
+   ═══════════════════════════════════════════════ */
+
+/* ── Hero ── */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 0 4rem 6rem;
+  position: relative; overflow: hidden;
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(212,168,83,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,168,83,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+}
+.hero-glow {
+  position: absolute;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(212,168,83,0.06) 0%, transparent 70%);
+  top: 10%; right: -100px;
+  pointer-events: none;
+}
+.hero-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem; letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  display: flex; align-items: center; gap: 1rem;
+  animation: fadeUp 0.8s ease both;
+}
+.hero-label::before {
+  content: ''; width: 40px; height: 1px; background: var(--accent);
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(4rem, 10vw, 9rem);
+  line-height: 0.95; letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 1rem;
+  animation: fadeUp 0.8s 0.1s ease both;
+}
+.hero-title em { font-style: italic; color: var(--accent); }
+
+.hero-subtitle-row {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 4rem;
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+.hero-role {
+  font-family: var(--font-mono);
+  font-size: 0.85rem; color: var(--muted);
+  line-height: 1.6; max-width: 420px;
+}
+.hero-role strong {
+  color: var(--text); font-weight: 400;
+  display: block; font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-sans);
+}
+.hero-actions { display: flex; gap: 1.25rem; flex-shrink: 0; }
+
+/* ── Ticker ── */
+.ticker {
+  background: var(--accent);
+  padding: 0.85rem 0;
+  overflow: hidden; white-space: nowrap;
+}
+.ticker-inner {
+  display: inline-flex; gap: 0;
+  animation: ticker 25s linear infinite;
+}
+.ticker-item {
+  font-family: var(--font-mono);
+  font-size: 0.72rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--bg);
+  padding: 0 3rem;
+}
+.ticker-sep { color: rgba(8,8,8,0.4); }
+/* ═══════════════════════════════════════════════
+   PROPUESTA.CSS — Sección "Sobre mí"
+   ✅ FIJO (los números stat sí se actualizan en index.html)
+   ═══════════════════════════════════════════════ */
+
+.propuesta {
+  padding: var(--section-pad);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 6rem;
+  align-items: start;
+  border-bottom: 1px solid var(--border2);
+}
+.propuesta-text {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  line-height: 1.3; color: var(--text);
+}
+.propuesta-text em { font-style: italic; color: var(--accent); }
+
+.propuesta-body {
+  margin-top: 2.5rem;
+  font-size: 0.9rem; line-height: 1.8;
+  color: var(--muted); max-width: 560px;
+}
+.propuesta-body strong { color: var(--text); font-weight: 500; }
+
+/* ── Stats ── */
+.stats-row { display: flex; gap: 3rem; margin-top: 3rem; }
+
+.stat-num {
+  font-family: var(--font-display);
+  font-style: italic; font-size: 2.5rem;
+  font-weight: 300; color: var(--accent); line-height: 1;
+}
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--muted);
+  margin-top: 0.4rem;
+}
+/* ═══════════════════════════════════════════════
+   PROYECTOS.CSS — Tarjetas de proyectos
+   🔄 ACTUALIZABLE — Añadir/quitar .project-card en sections/proyectos.html
+   ═══════════════════════════════════════════════ */
+
+.proyectos {
+  padding: var(--section-pad);
+  border-bottom: 1px solid var(--border2);
+}
+
+/* ── Grid de proyectos ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border2);
+}
+
+/* ── Tarjeta ── */
+.project-card {
+  background: var(--bg);
+  padding: 3rem; position: relative; overflow: hidden;
+  transition: background 0.3s;
+}
+.project-card:hover { background: var(--bg3); }
+.project-card::after {
+  content: ''; position: absolute; bottom: 0; left: 0;
+  width: 0; height: 2px; background: var(--accent);
+  transition: width 0.4s;
+}
+.project-card:hover::after { width: 100%; }
+
+/* ── Badge de estado ── */
+.project-tag {
+  font-family: var(--font-mono);
+  font-size: 0.62rem; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.tag-dot {
+  width: 6px; height: 6px;
+  background: var(--accent); border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* ── Nombre del proyecto ── */
+.project-name {
+  font-family: var(--font-display);
+  font-weight: 300; font-size: 2.5rem;
+  color: var(--text); margin-bottom: 0.25rem; line-height: 1;
+}
+.project-sub {
+  font-family: var(--font-mono);
+  font-size: 0.7rem; color: var(--muted);
+  letter-spacing: 0.1em; margin-bottom: 1.5rem;
+}
+.project-desc {
+  font-size: 0.85rem; line-height: 1.7;
+  color: var(--muted); margin-bottom: 2rem;
+}
+
+/* ── Stack tags ── */
+.project-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.stack-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem; letter-spacing: 0.1em;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--border2); color: var(--muted);
+  transition: all 0.2s;
+}
+.project-card:hover .stack-tag {
+  border-color: var(--border); color: var(--text);
+}
+
+/* ── Link externo ── */
+.project-link {
+  position: absolute; top: 2.5rem; right: 2.5rem;
+  font-family: var(--font-mono); font-size: 0.65rem;
+  color: var(--muted); letter-spacing: 0.1em;
+  display: flex; align-items: center; gap: 0.4rem;
+  transition: color 0.2s;
+}
+.project-card:hover .project-link { color: var(--accent); }
+.project-link svg { transition: transform 0.2s; }
+.project-card:hover .project-link svg { transform: translate(3px, -3px); }
+/* ═══════════════════════════════════════════════
+   SERVICIOS.CSS — Tarjetas de servicios
+   ✅ FIJO (los items de lista sí se pueden editar en sections/servicios.html)
+   ═══════════════════════════════════════════════ */
+
+.servicios {
+  padding: var(--section-pad);
+  border-bottom: 1px solid var(--border2);
+}
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border2);
+  margin-top: 4rem;
+}
+.servicio-card {
+  background: var(--bg);
+  padding: 3rem 2.5rem;
+  position: relative; overflow: hidden;
+}
+.servicio-num {
+  font-family: var(--font-display);
+  font-style: italic; font-size: 5rem;
+  font-weight: 300; color: rgba(212,168,83,0.08);
+  position: absolute; top: 1.5rem; right: 1.5rem;
+  line-height: 1; pointer-events: none;
+  transition: color 0.3s;
+}
+.servicio-card:hover .servicio-num { color: rgba(212,168,83,0.15); }
+
+.servicio-icon {
+  width: 48px; height: 48px;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 2rem; color: var(--accent);
+  transition: all 0.3s;
+}
+.servicio-card:hover .servicio-icon { background: var(--accent); color: var(--bg); }
+
+.servicio-title {
+  font-family: var(--font-display);
+  font-weight: 300; font-size: 1.5rem;
+  color: var(--text); margin-bottom: 0.75rem; line-height: 1.2;
+}
+.servicio-desc {
+  font-size: 0.82rem; line-height: 1.7;
+  color: var(--muted); margin-bottom: 1.5rem;
+}
+.servicio-items {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
+.servicio-items li {
+  font-family: var(--font-mono);
+  font-size: 0.68rem; color: var(--muted);
+  display: flex; align-items: center; gap: 0.6rem;
+  letter-spacing: 0.05em;
+}
+.servicio-items li::before { content: '→'; color: var(--accent); }
+/* ═══════════════════════════════════════════════
+   STACK.CSS — Stack tecnológico
+   🔄 ACTUALIZABLE — Añadir/quitar .stack-item en sections/stack.html
+   ═══════════════════════════════════════════════ */
+
+.stack-section {
+  padding: 6rem 4rem;
+  border-bottom: 1px solid var(--border2);
+}
+.stack-intro {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem; align-items: center;
+  margin-bottom: 4rem;
+}
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px; background: var(--border2);
+}
+.stack-item {
+  background: var(--bg);
+  padding: 1.5rem 1rem;
+  text-align: center; transition: background 0.3s;
+}
+.stack-item:hover { background: var(--bg3); }
+.stack-icon { font-size: 1.5rem; }
+.stack-item-name {
+  font-family: var(--font-mono);
+  font-size: 0.65rem; color: var(--text);
+  letter-spacing: 0.1em; display: block; margin-top: 0.5rem;
+}
+.stack-item-cat {
+  font-family: var(--font-mono);
+  font-size: 0.55rem; color: var(--muted);
+  letter-spacing: 0.1em; display: block; margin-top: 0.2rem;
+}
+/* ═══════════════════════════════════════════════
+   PROCESO.CSS — Sección de proceso de trabajo
+   ✅ FIJO
+   ═══════════════════════════════════════════════ */
+
+.proceso {
+  padding: var(--section-pad);
+  border-bottom: 1px solid var(--border2);
+}
+.proceso-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: var(--border2);
+  margin-top: 4rem;
+}
+.proceso-step {
+  background: var(--bg);
+  padding: 3rem 2rem; position: relative;
+}
+.step-num {
+  font-family: var(--font-display);
+  font-style: italic; font-size: 4rem;
+  font-weight: 300; color: var(--accent);
+  line-height: 1; margin-bottom: 1.5rem; opacity: 0.6;
+}
+.step-title {
+  font-size: 1rem; font-weight: 600;
+  color: var(--text); margin-bottom: 0.75rem; letter-spacing: 0.05em;
+}
+.step-desc {
+  font-size: 0.8rem; line-height: 1.7; color: var(--muted);
+}
+.step-duration {
+  font-family: var(--font-mono);
+  font-size: 0.6rem; color: var(--accent);
+  letter-spacing: 0.15em; margin-top: 1.5rem; text-transform: uppercase;
+}
+/* ═══════════════════════════════════════════════
+   CONTACTO.CSS — CTA, Footer, Cookie Banner
+   ✅ FIJO
+   ═══════════════════════════════════════════════ */
+
+/* ── Contacto ── */
+.contacto {
+  padding: 10rem 4rem;
+  position: relative; overflow: hidden;
+}
+.contacto-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(212,168,83,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+.contacto-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: start;
+  position: relative;
+}
+.contacto-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 2rem;
+}
+.contacto-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  line-height: 1.0; margin-bottom: 1.5rem;
+}
+.contacto-title em { font-style: italic; color: var(--accent); }
+.contacto-sub {
+  font-size: 0.88rem; color: var(--muted);
+  margin-bottom: 2.5rem; line-height: 1.8;
+}
+
+/* ── Info lateral ── */
+.contacto-info-items {
+  display: flex; flex-direction: column; gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+.contacto-info-item {
+  display: flex; align-items: center; gap: 1rem;
+}
+.contacto-info-icon {
+  width: 36px; height: 36px; flex-shrink: 0;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent);
+}
+.contacto-info-text {
+  font-family: var(--font-mono);
+  font-size: 0.72rem; color: var(--muted); line-height: 1.4;
+}
+.contacto-info-text strong { color: var(--text); display: block; margin-bottom: 0.1rem; }
+
+/* ── Formulario ── */
+.contacto-form {
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  padding: 3rem;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.form-group {
+  display: flex; flex-direction: column; gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.form-group:last-of-type { margin-bottom: 0; }
+
+.form-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--muted);
+}
+.form-label .required { color: var(--accent); margin-left: 0.2rem; }
+
+.form-input,
+.form-select,
+.form-textarea {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 0.9rem 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.form-input::placeholder,
+.form-textarea::placeholder { color: var(--muted); }
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--accent);
+  background: var(--bg);
+}
+.form-textarea { resize: vertical; min-height: 140px; line-height: 1.6; }
+
+.form-select-wrap { position: relative; }
+.form-select-wrap::after {
+  content: '▾';
+  position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);
+  color: var(--accent); pointer-events: none; font-size: 0.75rem;
+}
+.form-select { cursor: pointer; }
+.form-select option { background: var(--bg3); }
+
+/* ── Envío y estados ── */
+.form-footer {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem; margin-top: 2rem;
+}
+.form-note {
+  font-family: var(--font-mono);
+  font-size: 0.6rem; color: var(--muted); line-height: 1.5;
+}
+.form-submit {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  background: var(--accent); color: var(--bg);
+  padding: 1rem 2rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem; letter-spacing: 0.15em;
+  text-transform: uppercase; font-weight: 600;
+  border: none; cursor: pointer;
+  transition: all 0.3s; flex-shrink: 0;
+}
+.form-submit:hover:not(:disabled) { background: var(--text); }
+.form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+.form-submit .submit-arrow { transition: transform 0.2s; }
+.form-submit:hover:not(:disabled) .submit-arrow { transform: translateX(4px); }
+
+/* ── Mensajes de estado ── */
+.form-status {
+  display: none;
+  padding: 1rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin-top: 1.5rem;
+}
+.form-status.success {
+  display: block;
+  border-left: 2px solid var(--accent);
+  background: rgba(212,168,83,0.05);
+  color: var(--text);
+}
+.form-status.error {
+  display: block;
+  border-left: 2px solid #c0392b;
+  background: rgba(192,57,43,0.05);
+  color: #e88;
+}
+
+
+/* ── Footer ── */
+footer {
+  padding: 2.5rem 4rem;
+  border-top: 1px solid var(--border2);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 1rem;
+}
+.footer-left {
+  font-family: var(--font-display);
+  font-style: italic; font-size: 1rem;
+  font-weight: 300; color: var(--muted);
+}
+.footer-left span { color: var(--accent); }
+.footer-center {
+  font-family: var(--font-mono);
+  font-size: 0.62rem; color: var(--muted);
+  letter-spacing: 0.1em; text-align: center;
+}
+.footer-links {
+  display: flex; gap: 2rem; list-style: none;
+}
+.footer-links a {
+  font-family: var(--font-mono);
+  font-size: 0.62rem; color: var(--muted);
+  letter-spacing: 0.1em; transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--accent); }
+
+/* ── Cookie Banner ── */
+.cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  z-index: 999; background: var(--bg3);
+  border-top: 1px solid var(--border2);
+  padding: 1.25rem 4rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+}
+.cookie-banner.hidden { display: none; }
+.cookie-text {
+  font-family: var(--font-mono);
+  font-size: 0.72rem; color: var(--muted); line-height: 1.6;
+}
+.cookie-text a { color: var(--accent); }
+.cookie-actions { display: flex; gap: 0.75rem; flex-shrink: 0; }
+.cookie-btn {
+  font-family: var(--font-sans);
+  font-size: 0.65rem; letter-spacing: 0.15em;
+  text-transform: uppercase; padding: 0.6rem 1.25rem;
+  cursor: pointer; border: none; transition: all 0.2s;
+}
+.cookie-reject { background: transparent; border: 1px solid var(--border2); color: var(--muted); }
+.cookie-reject:hover { border-color: var(--muted); color: var(--text); }
+.cookie-accept { background: var(--accent); color: var(--bg); font-weight: 600; }
+.cookie-accept:hover { background: var(--text); }
+/* ═══════════════════════════════════════════════
+   RESPONSIVE.CSS — Media Queries
+   ✅ FIJO — Siempre el último en cargarse
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  /* Nav */
+  nav { padding: 1.25rem 2rem; }
+  .nav-links { display: none; }
+  .nav-mobile { display: flex; align-items: center; gap: 1rem; }
+
+  /* Hero */
+  .hero { padding: 0 2rem 5rem; }
+  .hero-subtitle-row { flex-direction: column; align-items: flex-start; gap: 2rem; }
+
+  /* Propuesta */
+  .propuesta { grid-template-columns: 1fr; gap: 3rem; padding: var(--section-pad-sm); }
+
+  /* Proyectos */
+  .proyectos { padding: var(--section-pad-sm); }
+  .projects-grid { grid-template-columns: 1fr; }
+
+  /* Servicios */
+  .servicios { padding: var(--section-pad-sm); }
+  .servicios-grid { grid-template-columns: 1fr; }
+
+  /* Stack */
+  .stack-section { padding: 4rem 2rem; }
+  .stack-intro { grid-template-columns: 1fr; gap: 2rem; }
+  .stack-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* Proceso */
+  .proceso { padding: var(--section-pad-sm); }
+  .proceso-steps { grid-template-columns: repeat(2, 1fr); }
+
+  /* Contacto */
+  .contacto { padding: 6rem 2rem; }
+  .contacto-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .contacto-form { padding: 2rem; }
+  .form-footer { flex-direction: column; align-items: flex-start; }
+
+  /* Footer */
+  footer { padding: 2rem; flex-direction: column; text-align: center; }
+
+  /* Cookie Banner */
+  .cookie-banner { padding: 1.25rem 2rem; flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 640px) {
+  .stats-row { flex-direction: column; gap: 1.5rem; }
+  .hero-actions { flex-direction: column; width: 100%; }
+  .btn-primary, .btn-secondary { justify-content: center; }
+  .stack-grid { grid-template-columns: repeat(2, 1fr); }
+  .proceso-steps { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" class="nav-name" style="display:flex;align-items:center;gap:0.75rem;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="34" height="34" style="display:block;"><rect width="80" height="80" fill="#080808"/><path d="M6,6 L6,12 M6,6 L12,6" fill="none" stroke="#D4A853" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/><path d="M74,6 L74,12 M74,6 L68,6" fill="none" stroke="#D4A853" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/><path d="M6,74 L6,68 M6,74 L12,74" fill="none" stroke="#D4A853" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/><path d="M74,74 L74,68 M74,74 L68,74" fill="none" stroke="#D4A853" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/><line x1="8" y1="42" x2="32" y2="42" stroke="#D4A853" stroke-width="0.7" opacity="0.3"/><line x1="48" y1="42" x2="72" y2="42" stroke="#D4A853" stroke-width="0.7" opacity="0.3"/><circle cx="40" cy="42" r="5" fill="none" stroke="#D4A853" stroke-width="0.7" opacity="0.22"/><circle cx="40" cy="42" r="2.5" fill="#D4A853"/><text x="40" y="52" font-family="Georgia,serif" font-style="italic" font-weight="300" font-size="40" fill="#F0EDE8" text-anchor="middle" dominant-baseline="alphabetic" letter-spacing="-1.5" opacity="0.93">sd</text></svg>
+    Sergio <span>Díaz</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="blog/index.html">Blog</a></li>
+    <li><a href="#contacto" class="nav-cta">Hablemos</a></li>
+  </ul>
+  <div class="nav-mobile">
+    <a href="#contacto" class="nav-cta" style="padding:0.5rem 1.25rem;border:1px solid var(--accent);color:var(--accent);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;">Contacto</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO ✅ FIJO
+     Actualizar: subtítulo, ciudad, texto descriptivo
+     ═══════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <div class="hero-label">
+    AI Product Builder · Viladecans, Barcelona
+  </div>
+
+  <h1 class="hero-title">
+    Sergio<br><em>Díaz</em>
+  </h1>
+
+  <div class="hero-subtitle-row">
+    <div class="hero-role">
+      <strong>AI Product Builder & Consultor IA</strong>
+      Construyo productos de inteligencia artificial que funcionan en producción —
+      agentes IA, automatizaciones y asistentes conversacionales para empresas que quieren resultados reales, no demos.
+    </div>
+    <div class="hero-actions">
+      <a href="#proyectos" class="btn-primary">Ver proyectos</a>
+      <a href="#contacto" class="btn-secondary">Hablemos →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     TICKER 🔄 ACTUALIZABLE
+     Edita los .ticker-item para cambiar las keywords del ticker
+     Duplica el bloque interior para mantener el bucle infinito
+     ═══════════════════════════════════════════════════════ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-inner">
+    <!-- Bloque A — duplicar en Bloque B para el loop continuo -->
+    <span class="ticker-item">Agentes IA <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Automatización empresarial <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">WhatsApp Business API <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Claude API <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">n8n workflows <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Productos IA en producción <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Integración Google & Microsoft <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Barcelona · España <span class="ticker-sep">·</span></span>
+    <!-- Bloque B — copia exacta del A -->
+    <span class="ticker-item">Agentes IA <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Automatización empresarial <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">WhatsApp Business API <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Claude API <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">n8n workflows <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Productos IA en producción <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Integración Google & Microsoft <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Barcelona · España <span class="ticker-sep">·</span></span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PROPUESTA — "Sobre mí" ✅ FIJO
+     🔄 Actualizar: párrafos de texto, números de stats
+     ═══════════════════════════════════════════════════════ -->
+<section class="propuesta">
+  <div class="section-label">01 — Sobre mí</div>
+  <div>
+    <p class="propuesta-text reveal">
+      No implemento IA genérica.<br>
+      Construyo <em>productos que funcionan</em><br>
+      con usuarios reales.
+    </p>
+    <p class="propuesta-body reveal">
+      Soy fundador de <strong>Flows Lab</strong>, operando a través de Representaciones Pablo &amp; Sergio, SL,
+      y llevo años construyendo productos de IA desde cero —
+      desde la arquitectura hasta la puesta en producción.
+      <br><br>
+      Mi diferencia es simple: <strong>no hablo de IA, la fabrico.</strong>
+      Luca y Valentina tienen usuarios reales. Senerva tiene usuarios reales.
+      Cuando te ayudo con tu proyecto, pongo encima de la mesa experiencia de primera mano
+      con errores ya cometidos y soluciones ya probadas.
+    </p>
+
+    <!-- 🔄 ACTUALIZAR: cambia los números cuando corresponda -->
+    <div class="stats-row reveal">
+      <div class="stat">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Productos IA<br>en producción</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">Automatizaciones<br>desplegadas</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">Uptime de los<br>productos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     PROYECTOS 🔄 ACTUALIZABLE
+     Edita sections/proyectos.html para añadir/quitar proyectos
+     ═══════════════════════════════════════════════════════ -->
+<section class="proyectos" id="proyectos">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-label" style="margin-bottom:1rem;">02 — Proyectos</div>
+      <h2 class="section-title">Productos que<br>he <em>construido</em></h2>
+    </div>
+    <p style="font-size:0.82rem;color:var(--muted);max-width:280px;line-height:1.7;text-align:right;">
+      No son demos ni prototipos.<br>Son productos reales con usuarios activos.
+    </p>
+  </div>
+
+  <div class="projects-grid">
+    <!-- 🔄 ACTUALIZABLE — Añade o quita .project-card aquí directamente -->
+
+    <!-- Luca -->
+    <div class="project-card reveal">
+      <div class="project-tag">
+        <div class="tag-dot"></div>
+        En producción · Asistente personal IA
+      </div>
+      <a href="https://luca.flowslabapp.com" target="_blank" rel="noopener" class="project-link">
+        luca.flowslabapp.com
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+      <div class="project-name">Luca</div>
+      <div class="project-sub">Asistente personal masculino · Para mujeres</div>
+      <p class="project-desc">Asistente personal exclusivo disponible 24/7 vía WhatsApp. Gestiona agenda (Google, Outlook, iCloud), email, restaurantes, vuelos y mucho más. Sistema de onboarding, tiers de suscripción y respuesta de voz por IA.</p>
+      <div class="project-stack">
+        <span class="stack-tag">Claude API</span><span class="stack-tag">WhatsApp Meta API</span><span class="stack-tag">n8n</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">OpenAI TTS</span><span class="stack-tag">Stripe</span><span class="stack-tag">Google OAuth</span>
+      </div>
+    </div>
+
+    <!-- Valentina -->
+    <div class="project-card reveal">
+      <div class="project-tag">
+        <div class="tag-dot"></div>
+        En producción · Asistente personal IA
+      </div>
+      <a href="https://valentina.flowslabapp.com" target="_blank" rel="noopener" class="project-link">
+        valentina.flowslabapp.com
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+      <div class="project-name">Valentina</div>
+      <div class="project-sub">Asistente personal femenina · Para hombres</div>
+      <p class="project-desc">Gemela de Luca con persona femenina diferenciada. Misma arquitectura de producción con sistema de routing inteligente vía un único webhook Meta, workflows independientes y personalidad e i18n propios.</p>
+      <div class="project-stack">
+        <span class="stack-tag">Claude API</span><span class="stack-tag">WhatsApp Meta API</span><span class="stack-tag">n8n</span><span class="stack-tag">Docker</span><span class="stack-tag">Traefik</span><span class="stack-tag">Microsoft OAuth</span>
+      </div>
+    </div>
+
+    <!-- Senerva -->
+    <div class="project-card reveal">
+      <div class="project-tag">
+        <div class="tag-dot"></div>
+        En producción · App de bienestar
+      </div>
+      <a href="https://senerva.com" target="_blank" rel="noopener" class="project-link">
+        senerva.com
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+      <div class="project-name">Senerva</div>
+      <div class="project-sub">Plataforma de bienestar con IA</div>
+      <p class="project-desc">Producto digital de salud y bienestar potenciado por inteligencia artificial. Usuarios activos, arquitectura escalable y experiencia de producto completa desde diseño hasta infraestructura.</p>
+      <div class="project-stack">
+        <span class="stack-tag">IA generativa</span><span class="stack-tag">Node.js</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">VPS producción</span>
+      </div>
+    </div>
+
+    <!-- Antonio -->
+    <div class="project-card reveal">
+      <div class="project-tag">
+        <div class="tag-dot" style="animation-delay:0.5s"></div>
+        Activo · Agente IA empresarial
+      </div>
+      <a href="https://toldos.flows-lab.es/" target="_blank" rel="noopener" class="project-link">
+        toldos.flows-lab.es
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+      <div class="project-name">Antonio</div>
+      <div class="project-sub">Agente IA de gestión empresarial</div>
+      <p class="project-desc">Agente de IA para automatización de operaciones internas. Gestión de tareas, comunicación y procesos de negocio mediante IA conversacional. Ejemplo real de IA aplicada a la operativa diaria de una empresa.</p>
+      <div class="project-stack">
+        <span class="stack-tag">Agente IA</span><span class="stack-tag">Claude API</span><span class="stack-tag">Automatización</span><span class="stack-tag">n8n</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     SERVICIOS ✅ FIJO
+     ═══════════════════════════════════════════════════════ -->
+<section class="servicios" id="servicios">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-label" style="margin-bottom:1rem;">03 — Servicios</div>
+      <h2 class="section-title">En qué puedo<br><em>ayudarte</em></h2>
+    </div>
+  </div>
+
+  <div class="servicios-grid">
+    <div class="servicio-card reveal">
+      <div class="servicio-num">01</div>
+      <div class="servicio-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+      </div>
+      <h3 class="servicio-title">Desarrollo de Agentes IA</h3>
+      <p class="servicio-desc">
+        Diseño y construyo agentes de inteligencia artificial autónomos adaptados a tu negocio.
+        Sin plantillas. Sin demos. Directo a producción.
+      </p>
+      <ul class="servicio-items">
+        <li>Agentes conversacionales WhatsApp / Web</li>
+        <li>Agentes de soporte y ventas</li>
+        <li>Agentes de back-office y operaciones</li>
+        <li>Integración con tus sistemas existentes</li>
+      </ul>
+    </div>
+
+    <div class="servicio-card reveal">
+      <div class="servicio-num">02</div>
+      <div class="servicio-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="3" width="20" height="14" rx="2"/>
+          <path d="M8 21h8M12 17v4M7 8h.01M11 8h6M7 12h.01M11 12h4"/>
+        </svg>
+      </div>
+      <h3 class="servicio-title">Automatización Empresarial</h3>
+      <p class="servicio-desc">
+        Identifico los procesos que puedes automatizar y los conecto con IA.
+        Más tiempo para lo que importa, menos tareas manuales.
+      </p>
+      <ul class="servicio-items">
+        <li>Workflows con n8n en tu infraestructura</li>
+        <li>Integración APIs (Google, Microsoft, Meta, Stripe)</li>
+        <li>Automatización de email, calendario y CRM</li>
+        <li>Alertas, reportes y notificaciones automáticas</li>
+      </ul>
+    </div>
+
+    <div class="servicio-card reveal">
+      <div class="servicio-num">03</div>
+      <div class="servicio-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <h3 class="servicio-title">Construcción de Productos IA</h3>
+      <p class="servicio-desc">
+        Si tienes una idea de producto con IA, puedo llevarte desde el concepto
+        hasta la versión en producción con usuarios reales.
+      </p>
+      <ul class="servicio-items">
+        <li>Arquitectura técnica completa</li>
+        <li>MVP en 8-12 semanas</li>
+        <li>Infraestructura escalable (VPS, Docker, PostgreSQL)</li>
+        <li>Monetización y sistema de pagos (Stripe)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     PROCESO ✅ FIJO
+     ═══════════════════════════════════════════════════════ -->
+<section class="proceso" id="proceso">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-label" style="margin-bottom:1rem;">04 — Proceso</div>
+      <h2 class="section-title">Cómo <em>trabajo</em></h2>
+    </div>
+  </div>
+
+  <div class="proceso-steps">
+    <div class="proceso-step reveal">
+      <div class="step-num">01</div>
+      <div class="step-title">Diagnóstico</div>
+      <p class="step-desc">Analizamos juntos tu negocio, tus procesos y dónde la IA puede generar más impacto. Sin vender humo, sin promesas vacías.</p>
+      <div class="step-duration">1 semana · Gratis</div>
+    </div>
+    <div class="proceso-step reveal">
+      <div class="step-num">02</div>
+      <div class="step-title">Diseño</div>
+      <p class="step-desc">Definimos la arquitectura técnica, las integraciones necesarias y el roadmap de entrega. Sabes exactamente qué vas a recibir y cuándo.</p>
+      <div class="step-duration">1-2 semanas</div>
+    </div>
+    <div class="proceso-step reveal">
+      <div class="step-num">03</div>
+      <div class="step-title">Desarrollo</div>
+      <p class="step-desc">Construyo en sprints cortos con demos reales. Ves el progreso cada semana, no al final de tres meses. Sin sorpresas.</p>
+      <div class="step-duration">6-10 semanas</div>
+    </div>
+    <div class="proceso-step reveal">
+      <div class="step-num">04</div>
+      <div class="step-title">Producción</div>
+      <p class="step-desc">Despliegue, monitorización y soporte post-lanzamiento. El producto funciona o seguimos hasta que funcione.</p>
+      <div class="step-duration">Ongoing</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     STACK 🔄 ACTUALIZABLE
+     Edita sections/stack.html para añadir/quitar herramientas
+     ═══════════════════════════════════════════════════════ -->
+<section class="stack-section">
+  <div class="stack-intro reveal">
+    <div>
+      <div class="section-label" style="margin-bottom:1rem;">05 — Stack</div>
+      <h2 class="section-title" style="font-size:clamp(1.5rem,3vw,2.5rem);">Herramientas<br><em>reales</em></h2>
+    </div>
+    <p style="font-size:0.85rem;color:var(--muted);line-height:1.8;">
+      No trabajo con frameworks de moda que no llegan a producción.
+      Todo lo que uso está desplegado y funcionando en mis propios productos.
+    </p>
+  </div>
+
+  <div class="stack-grid">
+    <!-- 🔄 ACTUALIZABLE — Añade o quita .stack-item aquí directamente -->
+    <div class="stack-item"><div class="stack-icon">🤖</div><span class="stack-item-name">Claude API</span><span class="stack-item-cat">LLM</span></div>
+    <div class="stack-item"><div class="stack-icon">⚡</div><span class="stack-item-name">n8n</span><span class="stack-item-cat">Automatización</span></div>
+    <div class="stack-item"><div class="stack-icon">💬</div><span class="stack-item-name">WhatsApp API</span><span class="stack-item-cat">Canal</span></div>
+    <div class="stack-item"><div class="stack-icon">🐘</div><span class="stack-item-name">PostgreSQL</span><span class="stack-item-cat">Base de datos</span></div>
+    <div class="stack-item"><div class="stack-icon">🐳</div><span class="stack-item-name">Docker</span><span class="stack-item-cat">Infraestructura</span></div>
+    <div class="stack-item"><div class="stack-icon">🔐</div><span class="stack-item-name">Stripe</span><span class="stack-item-cat">Pagos</span></div>
+    <div class="stack-item"><div class="stack-icon">📅</div><span class="stack-item-name">Google APIs</span><span class="stack-item-cat">Integraciones</span></div>
+    <div class="stack-item"><div class="stack-icon">📧</div><span class="stack-item-name">Microsoft</span><span class="stack-item-cat">Integraciones</span></div>
+    <div class="stack-item"><div class="stack-icon">🚀</div><span class="stack-item-name">Astro</span><span class="stack-item-cat">Frontend</span></div>
+    <div class="stack-item"><div class="stack-icon">⚛️</div><span class="stack-item-name">Next.js</span><span class="stack-item-cat">Dashboard</span></div>
+    <div class="stack-item"><div class="stack-icon">🎙️</div><span class="stack-item-name">OpenAI TTS</span><span class="stack-item-cat">Voz</span></div>
+    <div class="stack-item"><div class="stack-icon">🌐</div><span class="stack-item-name">VPS / Linux</span><span class="stack-item-cat">Servidor</span></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     CONTACTO 🔄 ACTUALIZABLE
+     Formulario via Formspree — cambia el action por tu endpoint:
+     1. Regístrate en https://formspree.io
+     2. Crea un nuevo form → copia tu endpoint (https://formspree.io/f/XXXXXXXX)
+     3. Pégalo en el atributo action del <form> de abajo
+     ═══════════════════════════════════════════════════════ -->
+<section class="contacto" id="contacto">
+  <div class="contacto-bg" aria-hidden="true"></div>
+
+  <div class="contacto-inner">
+
+    <!-- Columna izquierda — Copy -->
+    <div>
+      <div class="contacto-label">06 — Contacto</div>
+      <h2 class="contacto-title reveal">
+        ¿Tienes un<br>proyecto con <em>IA?</em>
+      </h2>
+      <p class="contacto-sub reveal">
+        Primera conversación sin coste. Te digo honestamente si puedo ayudarte
+        y cómo lo haría. Sin venderte nada que no necesites.
+      </p>
+
+      <div class="contacto-info-items reveal">
+        <div class="contacto-info-item">
+          <div class="contacto-info-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div class="contacto-info-text">
+            <strong>Email directo</strong>
+            hello@sergidiaz.com
+          </div>
+        </div>
+        <div class="contacto-info-item">
+          <div class="contacto-info-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12,6 12,12 16,14"/>
+            </svg>
+          </div>
+          <div class="contacto-info-text">
+            <strong>Tiempo de respuesta</strong>
+            Menos de 24 horas en días laborables
+          </div>
+        </div>
+        <div class="contacto-info-item">
+          <div class="contacto-info-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div class="contacto-info-text">
+            <strong>Ubicación</strong>
+            Viladecans, Barcelona — trabajo en remoto
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna derecha — Formulario -->
+    <div class="reveal">
+      <!--
+        ⚠️  CONFIGURA TU ENDPOINT FORMSPREE:
+        1. https://formspree.io → New Form → copia el endpoint
+        2. Sustituye "https://formspree.io/f/TU_ENDPOINT" por el tuyo
+      -->
+      <form
+        class="contacto-form"
+        id="contactForm"
+        action="https://formspree.io/f/mzdorbkl"
+        method="POST"
+        novalidate
+      >
+        <!-- Nombre + Email -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="nombre">Nombre <span class="required">*</span></label>
+            <input
+              class="form-input" type="text" id="nombre" name="nombre"
+              placeholder="Tu nombre" required autocomplete="given-name"
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email <span class="required">*</span></label>
+            <input
+              class="form-input" type="email" id="email" name="email"
+              placeholder="tu@email.com" required autocomplete="email"
+            />
+          </div>
+        </div>
+
+        <!-- Empresa -->
+        <div class="form-group">
+          <label class="form-label" for="empresa">Empresa / Proyecto</label>
+          <input
+            class="form-input" type="text" id="empresa" name="empresa"
+            placeholder="Nombre de tu empresa o proyecto (opcional)"
+          />
+        </div>
+
+        <!-- Tipo de servicio -->
+        <div class="form-group">
+          <label class="form-label" for="servicio">¿Qué necesitas? <span class="required">*</span></label>
+          <div class="form-select-wrap">
+            <select class="form-select" id="servicio" name="servicio" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="agente-ia">Desarrollo de agente IA</option>
+              <option value="automatizacion">Automatización empresarial</option>
+              <option value="producto-ia">Construcción de producto IA</option>
+              <option value="consultoria">Consultoría / Diagnóstico</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Mensaje -->
+        <div class="form-group">
+          <label class="form-label" for="mensaje">Cuéntame <span class="required">*</span></label>
+          <textarea
+            class="form-textarea" id="mensaje" name="mensaje"
+            placeholder="Describe brevemente tu proyecto o la necesidad que tienes. Cuanto más detalle, mejor puedo ayudarte."
+            required
+          ></textarea>
+        </div>
+
+        <!-- Honeypot anti-spam (oculto) -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+        <!-- Redirect Formspree: deshabilita el redirect automático -->
+        <input type="hidden" name="_subject" value="[sergidiaz.com] Nuevo mensaje de contacto" />
+
+        <!-- Footer del form -->
+        <div class="form-footer">
+          <p class="form-note">
+            * Campos obligatorios.<br>
+            Sin spam. Solo te respondo si puedo ayudarte.
+          </p>
+          <button type="submit" class="form-submit" id="submitBtn">
+            Enviar mensaje
+            <span class="submit-arrow">→</span>
+          </button>
+        </div>
+
+        <!-- Estado del envío -->
+        <div class="form-status" id="formStatus" role="alert"></div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER ✅ FIJO
+     🔄 Actualizar: año en el copyright si es necesario
+     ═══════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-left">Flows <span>Lab</span></div>
+  <div class="footer-center">
+    © 2026 Sergio Díaz · Todos los derechos reservados
+  </div>
+  <ul class="footer-links">
+    <li><a href="privacidad.html">Privacidad</a></li>
+    <li><a href="aviso-legal.html">Aviso legal</a></li>
+    <li><a href="cookies.html">Cookies</a></li>
+  </ul>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════
+     COOKIE BANNER ✅ FIJO (normativa EU)
+     ═══════════════════════════════════════════════════════ -->
+<div id="cookieBanner" class="cookie-banner hidden" role="dialog" aria-label="Aviso de cookies">
+  <p class="cookie-text">
+    Utilizamos cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico.
+    <a href="cookies.html">Más información</a>
+  </p>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-reject" id="cookieReject">Solo necesarias</button>
+    <button class="cookie-btn cookie-accept" id="cookieAccept">Aceptar</button>
+  </div>
+</div>
+<script>
+(function(){
+  // Nav scroll
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>50);},{passive:true});
+
+  // Reveal
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+
+  // Cookies
+  var banner=document.getElementById('cookieBanner');
+  if(!localStorage.getItem('sd_cookie'))banner.classList.remove('hidden');
+  document.getElementById('cookieAccept').onclick=function(){localStorage.setItem('sd_cookie','all');banner.classList.add('hidden');};
+  document.getElementById('cookieReject').onclick=function(){localStorage.setItem('sd_cookie','necessary');banner.classList.add('hidden');};
+
+  // Formulario
+  var form=document.getElementById('contactForm');
+  var btn=document.getElementById('submitBtn');
+  var status=document.getElementById('formStatus');
+  if(form){
+    form.addEventListener('submit',async function(e){
+      e.preventDefault();
+      var req=form.querySelectorAll('[required]'),valid=true;
+      req.forEach(function(f){f.style.borderColor='';if(!f.value.trim()){f.style.borderColor='#c0392b';valid=false;}});
+      if(!valid){show('error','Por favor rellena todos los campos obligatorios.');return;}
+      btn.disabled=true;btn.textContent='Enviando…';status.className='form-status';
+      try{
+        var res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+        if(res.ok){form.reset();show('success','✓ Mensaje enviado. Te respondo en menos de 24h.');btn.textContent='Enviado ✓';}
+        else{var j=await res.json().catch(function(){return{};});show('error',j?.errors?.map(function(e){return e.message;}).join(', ')||'Error. Escríbeme a hello@sergidiaz.com');btn.disabled=false;btn.innerHTML='Enviar mensaje <span class="submit-arrow">→</span>';}
+      }catch(_){show('error','Sin conexión. Escríbeme a hello@sergidiaz.com');btn.disabled=false;btn.innerHTML='Enviar mensaje <span class="submit-arrow">→</span>';}
+    });
+    function show(t,m){status.className='form-status '+t;status.textContent=m;}
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad | Sergio Díaz</title>
+  <meta name="description" content="Política de privacidad de Sergio Díaz — Representaciones Pablo & Sergio, SL. Cómo tratamos tus datos personales conforme al RGPD." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://sergidiaz.com/privacidad" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Fraunces:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/contacto.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <style>
+    /* ── Layout legal ── */
+    .legal-hero {
+      padding: 12rem 4rem 5rem;
+      border-bottom: 1px solid var(--border2);
+    }
+    .legal-hero .section-label { margin-bottom: 1.5rem; }
+    .legal-title {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .legal-title em { font-style: italic; color: var(--accent); }
+    .legal-meta {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      margin-top: 1.5rem;
+    }
+
+    /* ── Contenido ── */
+    .legal-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 6rem 4rem 8rem;
+    }
+    .legal-section {
+      margin-bottom: 3.5rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border2);
+    }
+    .legal-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .legal-section h2 {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: 1.6rem;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .legal-section h2 span {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      font-weight: 400;
+      background: var(--border);
+      padding: 0.2rem 0.6rem;
+    }
+    .legal-section p {
+      font-size: 0.88rem;
+      line-height: 1.85;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .legal-section p strong { color: var(--text); font-weight: 500; }
+    .legal-section ul {
+      list-style: none;
+      margin: 1rem 0 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .legal-section ul li {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.6;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+    .legal-section ul li::before {
+      content: '→';
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+    }
+    .legal-section ul li strong { color: var(--text); }
+
+    /* ── Tabla de datos ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+    }
+    .data-table th {
+      text-align: left;
+      padding: 0.75rem 1rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-size: 0.6rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg3);
+    }
+    .data-table td {
+      padding: 0.85rem 1rem;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border2);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .data-table td strong { color: var(--text); }
+
+    /* ── Aviso destacado ── */
+    .legal-note {
+      background: var(--bg3);
+      border-left: 2px solid var(--accent);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .legal-note p {
+      font-size: 0.82rem !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* ── Back link ── */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      margin-bottom: 4rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--accent); }
+
+    @media (max-width: 1024px) {
+      .legal-hero { padding: 10rem 2rem 4rem; }
+      .legal-body { padding: 4rem 2rem 6rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="/" class="nav-name">Sergio <span>Díaz</span></a>
+  <ul class="nav-links">
+    <li><a href="/#proyectos">Proyectos</a></li>
+    <li><a href="/#servicios">Servicios</a></li>
+    <li><a href="/#proceso">Proceso</a></li>
+    <li><a href="/#contacto" class="nav-cta">Hablemos</a></li>
+  </ul>
+  <div class="nav-mobile">
+    <a href="/#contacto" class="nav-cta" style="padding:0.5rem 1.25rem;border:1px solid var(--accent);color:var(--accent);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;">Contacto</a>
+  </div>
+</nav>
+
+<!-- HERO LEGAL -->
+<div class="legal-hero">
+  <div class="section-label">Legal</div>
+  <h1 class="legal-title">Política de<br><em>Privacidad</em></h1>
+  <p class="legal-meta">
+    Última actualización: Mayo 2026 &nbsp;·&nbsp; Versión 1.0 &nbsp;·&nbsp; RGPD / LOPDGDD
+  </p>
+</div>
+
+<!-- CUERPO -->
+<div class="legal-body">
+  <a href="/" class="back-link">← Volver al inicio</a>
+
+  <!-- 1. Responsable -->
+  <div class="legal-section">
+    <h2><span>01</span> Responsable del tratamiento</h2>
+    <p>En cumplimiento del Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), te informamos de que el responsable del tratamiento de tus datos personales es:</p>
+    <table class="data-table">
+      <tr><th>Campo</th><th>Información</th></tr>
+      <tr><td>Razón social</td><td><strong>Representaciones Pablo &amp; Sergio, SL</strong></td></tr>
+      <tr><td>CIF</td><td>B21867304</td></tr>
+      <tr><td>Domicilio social</td><td>CL Joan Fivaller 28, 08840 Viladecans, Barcelona</td></tr>
+      <tr><td>Email de contacto</td><td><strong>hello@sergidiaz.com</strong></td></tr>
+      <tr><td>Web</td><td>https://sergidiaz.com</td></tr>
+    </table>
+  </div>
+
+  <!-- 2. Datos que recogemos -->
+  <div class="legal-section">
+    <h2><span>02</span> Datos que recogemos y finalidad</h2>
+    <p>Solo tratamos los datos estrictamente necesarios para cada finalidad:</p>
+
+    <table class="data-table">
+      <tr>
+        <th>Dato</th>
+        <th>Finalidad</th>
+        <th>Base legal</th>
+        <th>Conservación</th>
+      </tr>
+      <tr>
+        <td><strong>Nombre y email</strong></td>
+        <td>Responder a consultas recibidas por email</td>
+        <td>Interés legítimo (Art. 6.1.f RGPD)</td>
+        <td>Hasta resolución + 1 año</td>
+      </tr>
+      <tr>
+        <td><strong>Datos de navegación</strong></td>
+        <td>Análisis de tráfico web (solo con consentimiento)</td>
+        <td>Consentimiento (Art. 6.1.a RGPD)</td>
+        <td>26 meses desde la sesión</td>
+      </tr>
+      <tr>
+        <td><strong>IP y User-Agent</strong></td>
+        <td>Seguridad y prevención de fraude (logs del servidor)</td>
+        <td>Interés legítimo (Art. 6.1.f RGPD)</td>
+        <td>90 días</td>
+      </tr>
+    </table>
+
+    <div class="legal-note">
+      <p><strong>No recogemos datos a través de formularios web.</strong> El único canal de contacto es el correo electrónico directo (hello@sergidiaz.com). Si nos escribes, trataremos tu nombre y email únicamente para responder a tu consulta.</p>
+    </div>
+  </div>
+
+  <!-- 3. Transferencias -->
+  <div class="legal-section">
+    <h2><span>03</span> Destinatarios y transferencias internacionales</h2>
+    <p>No cedemos tus datos a terceros salvo obligación legal. Los encargados del tratamiento con los que trabajamos son:</p>
+    <ul>
+      <li><strong>Hetzner Online GmbH</strong> — Proveedor de infraestructura VPS (servidores en Alemania, UE). Cuenta con medidas técnicas conforme al RGPD.</li>
+      <li><strong>Google LLC</strong> — Fuentes de Google Fonts (carga remota de tipografías). Transferencia internacional cubierta por Cláusulas Contractuales Tipo.</li>
+    </ul>
+    <p>No realizamos transferencias internacionales de datos personales fuera del EEE salvo lo indicado, y siempre con las garantías legales correspondientes.</p>
+  </div>
+
+  <!-- 4. Derechos -->
+  <div class="legal-section">
+    <h2><span>04</span> Tus derechos</h2>
+    <p>Conforme al RGPD, tienes derecho a:</p>
+    <ul>
+      <li><strong>Acceso</strong> — Saber qué datos tuyos tratamos.</li>
+      <li><strong>Rectificación</strong> — Corregir datos inexactos o incompletos.</li>
+      <li><strong>Supresión</strong> — Solicitar la eliminación de tus datos ("derecho al olvido").</li>
+      <li><strong>Oposición</strong> — Oponerte al tratamiento basado en interés legítimo.</li>
+      <li><strong>Limitación</strong> — Solicitar que suspendamos el tratamiento en determinados casos.</li>
+      <li><strong>Portabilidad</strong> — Recibir tus datos en formato estructurado y legible.</li>
+      <li><strong>Retirada del consentimiento</strong> — En cualquier momento, sin efecto retroactivo.</li>
+    </ul>
+    <p>Para ejercer cualquiera de estos derechos, escríbenos a <strong>hello@sergidiaz.com</strong> con el asunto "Derechos RGPD" e identificándote. Responderemos en el plazo máximo de <strong>30 días</strong>.</p>
+    <p>Si consideras que no hemos atendido correctamente tu solicitud, puedes reclamar ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong> en <a href="https://www.aepd.es" style="color:var(--accent);">www.aepd.es</a>.</p>
+  </div>
+
+  <!-- 5. Seguridad -->
+  <div class="legal-section">
+    <h2><span>05</span> Medidas de seguridad</h2>
+    <p>Aplicamos medidas técnicas y organizativas apropiadas para proteger tus datos frente a acceso no autorizado, pérdida o destrucción accidental:</p>
+    <ul>
+      <li>Cifrado HTTPS/TLS en todas las comunicaciones.</li>
+      <li>Acceso restringido a los datos por principio de mínimo privilegio.</li>
+      <li>Copias de seguridad periódicas en entornos separados.</li>
+      <li>Monitorización de logs de acceso con retención de 90 días.</li>
+    </ul>
+  </div>
+
+  <!-- 6. Cookies -->
+  <div class="legal-section">
+    <h2><span>06</span> Política de cookies</h2>
+    <p>El uso de cookies en este sitio web se detalla en nuestra <a href="/cookies" style="color:var(--accent);">Política de Cookies</a>. Las cookies de análisis solo se activan con tu consentimiento explícito.</p>
+  </div>
+
+  <!-- 7. Cambios -->
+  <div class="legal-section">
+    <h2><span>07</span> Cambios en esta política</h2>
+    <p>Podemos actualizar esta política cuando sea necesario (nuevos servicios, cambios normativos). La fecha de la última actualización aparece siempre en la cabecera. Te recomendamos revisarla periódicamente.</p>
+    <p>Si los cambios afectan significativamente al tratamiento de tus datos, te lo comunicaremos por los canales disponibles.</p>
+  </div>
+
+  <a href="/" class="back-link">← Volver al inicio</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">Sergio <span>Díaz</span></div>
+  <div class="footer-center">
+    © 2026 Representaciones Pablo &amp; Sergio, SL · CIF B21867304<br>
+    CL Joan Fivaller 28, 08840 Viladecans, Barcelona
+  </div>
+  <ul class="footer-links">
+    <li><a href="/privacidad">Privacidad</a></li>
+    <li><a href="/aviso-legal">Aviso legal</a></li>
+    <li><a href="/cookies">Cookies</a></li>
+  </ul>
+</footer>
+
+<script src="js/nav.js" defer></script>
+</body>
+</html>

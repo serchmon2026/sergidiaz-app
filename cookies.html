@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Cookies | Sergio Díaz</title>
+  <meta name="description" content="Política de cookies de Sergio Díaz — Qué cookies usamos, para qué y cómo puedes gestionarlas. Conforme a la Directiva ePrivacy y el RGPD." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://sergidiaz.com/cookies" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Fraunces:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/contacto.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <style>
+    .legal-hero {
+      padding: 12rem 4rem 5rem;
+      border-bottom: 1px solid var(--border2);
+    }
+    .legal-hero .section-label { margin-bottom: 1.5rem; }
+    .legal-title {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .legal-title em { font-style: italic; color: var(--accent); }
+    .legal-meta {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      margin-top: 1.5rem;
+    }
+    .legal-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 6rem 4rem 8rem;
+    }
+    .legal-section {
+      margin-bottom: 3.5rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border2);
+    }
+    .legal-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .legal-section h2 {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: 1.6rem;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .legal-section h2 span {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      font-weight: 400;
+      background: var(--border);
+      padding: 0.2rem 0.6rem;
+    }
+    .legal-section p {
+      font-size: 0.88rem;
+      line-height: 1.85;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .legal-section p strong { color: var(--text); font-weight: 500; }
+    .legal-section ul {
+      list-style: none;
+      margin: 1rem 0 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .legal-section ul li {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.6;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+    .legal-section ul li::before {
+      content: '→';
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+    }
+    .legal-section ul li strong { color: var(--text); }
+
+    /* ── Tabla de cookies ── */
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+    }
+    .cookie-table th {
+      text-align: left;
+      padding: 0.75rem 0.85rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-size: 0.58rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg3);
+    }
+    .cookie-table td {
+      padding: 0.85rem;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border2);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .cookie-table td strong { color: var(--text); }
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .badge-required  { background: rgba(212,168,83,0.12); color: var(--accent); }
+    .badge-analytics { background: rgba(240,237,232,0.06); color: var(--muted); }
+    .badge-third     { background: rgba(255,255,255,0.04); color: var(--muted); border: 1px solid var(--border2); }
+
+    /* ── Panel de preferencias ── */
+    .pref-panel {
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    .pref-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border2);
+      gap: 2rem;
+    }
+    .pref-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .pref-info {}
+    .pref-name {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.05em;
+    }
+    .pref-desc {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    /* Toggle switch */
+    .toggle-wrap { flex-shrink: 0; display: flex; align-items: center; gap: 0.75rem; }
+    .toggle-label {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+    }
+    .toggle {
+      position: relative;
+      width: 44px; height: 24px;
+      flex-shrink: 0;
+    }
+    .toggle input { display: none; }
+    .toggle-slider {
+      position: absolute; inset: 0;
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .toggle-slider::before {
+      content: '';
+      position: absolute;
+      width: 16px; height: 16px;
+      left: 3px; top: 3px;
+      background: var(--muted);
+      transition: all 0.3s;
+    }
+    .toggle input:checked + .toggle-slider { background: rgba(212,168,83,0.15); border-color: var(--accent); }
+    .toggle input:checked + .toggle-slider::before { transform: translateX(20px); background: var(--accent); }
+    .toggle input:disabled + .toggle-slider { cursor: not-allowed; opacity: 0.6; }
+    .toggle input:disabled + .toggle-slider::before { background: var(--accent); transform: translateX(20px); }
+
+    .pref-save-row {
+      margin-top: 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .pref-save {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.75rem 2rem;
+      background: var(--accent); color: var(--bg);
+      border: none; cursor: pointer;
+      font-weight: 600; transition: background 0.2s;
+    }
+    .pref-save:hover { background: var(--text); }
+    .pref-msg {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--accent);
+      display: none;
+    }
+    .pref-msg.show { display: block; }
+
+    .legal-note {
+      background: var(--bg3);
+      border-left: 2px solid var(--accent);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .legal-note p { font-size: 0.82rem !important; margin-bottom: 0 !important; }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      margin-bottom: 4rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--accent); }
+    @media (max-width: 1024px) {
+      .legal-hero { padding: 10rem 2rem 4rem; }
+      .legal-body { padding: 4rem 2rem 6rem; }
+      .pref-row { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .cookie-table { font-size: 0.62rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="/" class="nav-name">Sergio <span>Díaz</span></a>
+  <ul class="nav-links">
+    <li><a href="/#proyectos">Proyectos</a></li>
+    <li><a href="/#servicios">Servicios</a></li>
+    <li><a href="/#proceso">Proceso</a></li>
+    <li><a href="/#contacto" class="nav-cta">Hablemos</a></li>
+  </ul>
+  <div class="nav-mobile">
+    <a href="/#contacto" class="nav-cta" style="padding:0.5rem 1.25rem;border:1px solid var(--accent);color:var(--accent);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;">Contacto</a>
+  </div>
+</nav>
+
+<!-- HERO LEGAL -->
+<div class="legal-hero">
+  <div class="section-label">Legal</div>
+  <h1 class="legal-title">Política de<br><em>Cookies</em></h1>
+  <p class="legal-meta">
+    Última actualización: Mayo 2026 &nbsp;·&nbsp; Conforme a Directiva ePrivacy + RGPD
+  </p>
+</div>
+
+<!-- CUERPO -->
+<div class="legal-body">
+  <a href="/" class="back-link">← Volver al inicio</a>
+
+  <!-- 1. Qué son -->
+  <div class="legal-section">
+    <h2><span>01</span> ¿Qué son las cookies?</h2>
+    <p>Las cookies son pequeños ficheros de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Sirven para recordar tus preferencias, analizar cómo se usa el sitio o personalizar contenidos.</p>
+    <p>Este sitio web usa el mínimo de cookies necesario para funcionar. <strong>No usamos cookies de publicidad ni de rastreo de terceros con fines comerciales.</strong></p>
+  </div>
+
+  <!-- 2. Cookies que usamos -->
+  <div class="legal-section">
+    <h2><span>02</span> Cookies que utilizamos</h2>
+
+    <table class="cookie-table">
+      <tr>
+        <th>Nombre</th>
+        <th>Tipo</th>
+        <th>Finalidad</th>
+        <th>Duración</th>
+        <th>Proveedor</th>
+      </tr>
+      <tr>
+        <td><strong>sd_cookie</strong></td>
+        <td><span class="badge badge-required">Necesaria</span></td>
+        <td>Guarda tu preferencia de consentimiento de cookies para no volver a mostrarte el banner.</td>
+        <td>1 año</td>
+        <td>sergidiaz.com</td>
+      </tr>
+      <tr>
+        <td><strong>_ga</strong></td>
+        <td><span class="badge badge-analytics">Analítica</span></td>
+        <td>Identificador único de Google Analytics para distinguir usuarios. Solo se activa si aceptas cookies analíticas.</td>
+        <td>2 años</td>
+        <td>Google LLC</td>
+      </tr>
+      <tr>
+        <td><strong>_ga_*</strong></td>
+        <td><span class="badge badge-analytics">Analítica</span></td>
+        <td>Mantiene el estado de sesión en Google Analytics 4.</td>
+        <td>2 años</td>
+        <td>Google LLC</td>
+      </tr>
+    </table>
+
+    <div class="legal-note">
+      <p>Las cookies analíticas de Google Analytics están configuradas con <strong>anonimización de IP activada</strong> y sin compartir datos con Google para publicidad. Solo se activan si haces clic en "Aceptar" en el banner de cookies.</p>
+    </div>
+  </div>
+
+  <!-- 3. Gestión de preferencias -->
+  <div class="legal-section">
+    <h2><span>03</span> Gestiona tus preferencias</h2>
+    <p>Puedes cambiar tu consentimiento en cualquier momento aquí. La preferencia se guarda en tu navegador.</p>
+
+    <div class="pref-panel">
+      <!-- Necesarias -->
+      <div class="pref-row">
+        <div class="pref-info">
+          <div class="pref-name">Cookies necesarias</div>
+          <div class="pref-desc">Imprescindibles para el funcionamiento del sitio. No se pueden desactivar.</div>
+        </div>
+        <div class="toggle-wrap">
+          <span class="toggle-label">Siempre activas</span>
+          <label class="toggle">
+            <input type="checkbox" checked disabled />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Analíticas -->
+      <div class="pref-row">
+        <div class="pref-info">
+          <div class="pref-name">Cookies analíticas</div>
+          <div class="pref-desc">Nos ayudan a entender cómo se usa el sitio (visitas, páginas vistas). Datos anónimos.</div>
+        </div>
+        <div class="toggle-wrap">
+          <span class="toggle-label" id="analyticsLabel">Desactivadas</span>
+          <label class="toggle">
+            <input type="checkbox" id="analyticsToggle" />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="pref-save-row">
+        <button class="pref-save" id="savePref">Guardar preferencias</button>
+        <span class="pref-msg" id="prefMsg">✓ Preferencias guardadas</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Cómo desactivarlas en el navegador -->
+  <div class="legal-section">
+    <h2><span>04</span> Desactivar cookies en el navegador</h2>
+    <p>También puedes gestionar o eliminar las cookies directamente desde la configuración de tu navegador:</p>
+    <ul>
+      <li><strong>Chrome</strong> — Configuración → Privacidad y seguridad → Cookies y otros datos de sitios</li>
+      <li><strong>Firefox</strong> — Ajustes → Privacidad y seguridad → Cookies y datos del sitio</li>
+      <li><strong>Safari</strong> — Preferencias → Privacidad → Gestionar datos del sitio web</li>
+      <li><strong>Edge</strong> — Configuración → Privacidad, búsqueda y servicios → Cookies</li>
+    </ul>
+    <p>Ten en cuenta que desactivar todas las cookies puede afectar al funcionamiento de algunos sitios web.</p>
+  </div>
+
+  <!-- 5. Terceros -->
+  <div class="legal-section">
+    <h2><span>05</span> Cookies de terceros</h2>
+    <p>Las cookies analíticas las gestiona <strong>Google LLC</strong> a través de Google Analytics 4. Google puede transferir esta información a terceros cuando así lo exija la ley, o cuando dichos terceros procesen la información en nombre de Google.</p>
+    <p>Puedes obtener más información sobre la privacidad de Google en <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--accent);">policies.google.com/privacy</a> y optar por no participar en Google Analytics en <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" style="color:var(--accent);">tools.google.com/dlpage/gaoptout</a>.</p>
+  </div>
+
+  <!-- 6. Actualizaciones -->
+  <div class="legal-section">
+    <h2><span>06</span> Actualizaciones de esta política</h2>
+    <p>Podemos actualizar esta política cuando añadamos o eliminemos cookies, o cuando cambie la normativa aplicable. La fecha de actualización aparece siempre en la cabecera de esta página.</p>
+    <p>Si tienes dudas, escríbenos a <strong>hello@sergidiaz.com</strong>.</p>
+  </div>
+
+  <a href="/" class="back-link">← Volver al inicio</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">Sergio <span>Díaz</span></div>
+  <div class="footer-center">
+    © 2026 Representaciones Pablo &amp; Sergio, SL · CIF B21867304<br>
+    CL Joan Fivaller 28, 08840 Viladecans, Barcelona
+  </div>
+  <ul class="footer-links">
+    <li><a href="/privacidad">Privacidad</a></li>
+    <li><a href="/aviso-legal">Aviso legal</a></li>
+    <li><a href="/cookies">Cookies</a></li>
+  </ul>
+</footer>
+
+<script src="js/nav.js" defer></script>
+
+<!-- Panel de gestión de preferencias -->
+<script>
+  (function () {
+    const STORAGE_KEY   = 'sd_cookie';
+    const toggle        = document.getElementById('analyticsToggle');
+    const label         = document.getElementById('analyticsLabel');
+    const saveBtn       = document.getElementById('savePref');
+    const msg           = document.getElementById('prefMsg');
+
+    // Inicializar estado según preferencia guardada
+    const current = localStorage.getItem(STORAGE_KEY);
+    if (current === 'all') {
+      toggle.checked   = true;
+      label.textContent = 'Activadas';
+    }
+
+    toggle.addEventListener('change', () => {
+      label.textContent = toggle.checked ? 'Activadas' : 'Desactivadas';
+    });
+
+    saveBtn.addEventListener('click', () => {
+      const value = toggle.checked ? 'all' : 'necessary';
+      localStorage.setItem(STORAGE_KEY, value);
+
+      // Hook analítica: si activa, inicializar GA; si desactiva, bloquear
+      if (value === 'all') {
+        // window.initAnalytics && window.initAnalytics();
+      }
+
+      msg.classList.add('show');
+      setTimeout(() => msg.classList.remove('show'), 3000);
+    });
+  })();
+</script>
+
+</body>
+</html>

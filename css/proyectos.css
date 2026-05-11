@@ -1,0 +1,86 @@
+/* ═══════════════════════════════════════════════
+   PROYECTOS.CSS — Tarjetas de proyectos
+   🔄 ACTUALIZABLE — Añadir/quitar .project-card en sections/proyectos.html
+   ═══════════════════════════════════════════════ */
+
+.proyectos {
+  padding: var(--section-pad);
+  border-bottom: 1px solid var(--border2);
+}
+
+/* ── Grid de proyectos ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border2);
+}
+
+/* ── Tarjeta ── */
+.project-card {
+  background: var(--bg);
+  padding: 3rem; position: relative; overflow: hidden;
+  transition: background 0.3s;
+}
+.project-card:hover { background: var(--bg3); }
+.project-card::after {
+  content: ''; position: absolute; bottom: 0; left: 0;
+  width: 0; height: 2px; background: var(--accent);
+  transition: width 0.4s;
+}
+.project-card:hover::after { width: 100%; }
+
+/* ── Badge de estado ── */
+.project-tag {
+  font-family: var(--font-mono);
+  font-size: 0.62rem; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.tag-dot {
+  width: 6px; height: 6px;
+  background: var(--accent); border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* ── Nombre del proyecto ── */
+.project-name {
+  font-family: var(--font-display);
+  font-weight: 300; font-size: 2.5rem;
+  color: var(--text); margin-bottom: 0.25rem; line-height: 1;
+}
+.project-sub {
+  font-family: var(--font-mono);
+  font-size: 0.7rem; color: var(--muted);
+  letter-spacing: 0.1em; margin-bottom: 1.5rem;
+}
+.project-desc {
+  font-size: 0.85rem; line-height: 1.7;
+  color: var(--muted); margin-bottom: 2rem;
+}
+
+/* ── Stack tags ── */
+.project-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.stack-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem; letter-spacing: 0.1em;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--border2); color: var(--muted);
+  transition: all 0.2s;
+}
+.project-card:hover .stack-tag {
+  border-color: var(--border); color: var(--text);
+}
+
+/* ── Link externo ── */
+.project-link {
+  position: absolute; top: 2.5rem; right: 2.5rem;
+  font-family: var(--font-mono); font-size: 0.65rem;
+  color: var(--muted); letter-spacing: 0.1em;
+  display: flex; align-items: center; gap: 0.4rem;
+  transition: color 0.2s;
+}
+.project-card:hover .project-link { color: var(--accent); }
+.project-link svg { transition: transform 0.2s; }
+.project-card:hover .project-link svg { transform: translate(3px, -3px); }

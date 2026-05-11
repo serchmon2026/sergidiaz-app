@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aviso Legal | Sergio Díaz</title>
+  <meta name="description" content="Aviso legal de Sergio Díaz — Representaciones Pablo & Sergio, SL. Información legal, condiciones de uso y responsabilidades conforme a la LSSI-CE." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://sergidiaz.com/aviso-legal" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Fraunces:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/contacto.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <style>
+    .legal-hero {
+      padding: 12rem 4rem 5rem;
+      border-bottom: 1px solid var(--border2);
+    }
+    .legal-hero .section-label { margin-bottom: 1.5rem; }
+    .legal-title {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .legal-title em { font-style: italic; color: var(--accent); }
+    .legal-meta {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      margin-top: 1.5rem;
+    }
+    .legal-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 6rem 4rem 8rem;
+    }
+    .legal-section {
+      margin-bottom: 3.5rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border2);
+    }
+    .legal-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .legal-section h2 {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: 1.6rem;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .legal-section h2 span {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      font-weight: 400;
+      background: var(--border);
+      padding: 0.2rem 0.6rem;
+    }
+    .legal-section p {
+      font-size: 0.88rem;
+      line-height: 1.85;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .legal-section p strong { color: var(--text); font-weight: 500; }
+    .legal-section ul {
+      list-style: none;
+      margin: 1rem 0 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .legal-section ul li {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.6;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+    .legal-section ul li::before {
+      content: '→';
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+    }
+    .legal-section ul li strong { color: var(--text); }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+    }
+    .data-table th {
+      text-align: left;
+      padding: 0.75rem 1rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-size: 0.6rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg3);
+    }
+    .data-table td {
+      padding: 0.85rem 1rem;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border2);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .data-table td strong { color: var(--text); }
+    .legal-note {
+      background: var(--bg3);
+      border-left: 2px solid var(--accent);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .legal-note p { font-size: 0.82rem !important; margin-bottom: 0 !important; }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      margin-bottom: 4rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--accent); }
+    @media (max-width: 1024px) {
+      .legal-hero { padding: 10rem 2rem 4rem; }
+      .legal-body { padding: 4rem 2rem 6rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="/" class="nav-name">Sergio <span>Díaz</span></a>
+  <ul class="nav-links">
+    <li><a href="/#proyectos">Proyectos</a></li>
+    <li><a href="/#servicios">Servicios</a></li>
+    <li><a href="/#proceso">Proceso</a></li>
+    <li><a href="/#contacto" class="nav-cta">Hablemos</a></li>
+  </ul>
+  <div class="nav-mobile">
+    <a href="/#contacto" class="nav-cta" style="padding:0.5rem 1.25rem;border:1px solid var(--accent);color:var(--accent);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;">Contacto</a>
+  </div>
+</nav>
+
+<!-- HERO LEGAL -->
+<div class="legal-hero">
+  <div class="section-label">Legal</div>
+  <h1 class="legal-title">Aviso<br><em>Legal</em></h1>
+  <p class="legal-meta">
+    Última actualización: Mayo 2026 &nbsp;·&nbsp; Conforme a la LSSI-CE y RGPD
+  </p>
+</div>
+
+<!-- CUERPO -->
+<div class="legal-body">
+  <a href="/" class="back-link">← Volver al inicio</a>
+
+  <!-- 1. Identificación -->
+  <div class="legal-section">
+    <h2><span>01</span> Datos identificativos</h2>
+    <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se facilitan los datos de identificación del titular del sitio web:</p>
+    <table class="data-table">
+      <tr><th>Campo</th><th>Datos</th></tr>
+      <tr><td>Denominación social</td><td><strong>Representaciones Pablo &amp; Sergio, SL</strong></td></tr>
+      <tr><td>Nombre comercial</td><td>Flows Lab / Sergio Díaz</td></tr>
+      <tr><td>CIF</td><td><strong>B21867304</strong></td></tr>
+      <tr><td>Domicilio social</td><td>CL Joan Fivaller 28, 08840 Viladecans, Barcelona, España</td></tr>
+      <tr><td>Email</td><td>hello@sergidiaz.com</td></tr>
+      <tr><td>Web</td><td>https://sergidiaz.com</td></tr>
+      <tr><td>Registro Mercantil</td><td>Registro Mercantil de Barcelona</td></tr>
+    </table>
+  </div>
+
+  <!-- 2. Objeto y aceptación -->
+  <div class="legal-section">
+    <h2><span>02</span> Objeto y aceptación de condiciones</h2>
+    <p>El presente aviso legal regula el acceso y uso del sitio web <strong>sergidiaz.com</strong> (en adelante, "el Sitio Web"), titularidad de Representaciones Pablo &amp; Sergio, SL.</p>
+    <p>El acceso al Sitio Web implica la aceptación plena y sin reservas de las presentes condiciones. Si no estás de acuerdo, te rogamos que abandones el sitio.</p>
+    <p>Nos reservamos el derecho a modificar las condiciones en cualquier momento. La versión vigente será siempre la publicada en esta página.</p>
+  </div>
+
+  <!-- 3. Propiedad intelectual -->
+  <div class="legal-section">
+    <h2><span>03</span> Propiedad intelectual e industrial</h2>
+    <p>Todos los contenidos del Sitio Web — incluyendo, sin carácter limitativo, textos, diseño gráfico, logotipos, iconos, imágenes, código fuente, estructura y arquitectura visual — son titularidad de <strong>Representaciones Pablo &amp; Sergio, SL</strong> o de terceros que han autorizado su uso, y están protegidos por la legislación española e internacional de propiedad intelectual e industrial.</p>
+    <p>Queda expresamente prohibido:</p>
+    <ul>
+      <li>Reproducir, copiar, distribuir o comunicar públicamente cualquier contenido sin autorización previa y escrita.</li>
+      <li>Modificar o transformar los contenidos del Sitio Web.</li>
+      <li>Utilizar los contenidos con fines comerciales sin autorización.</li>
+      <li>Suprimir, alterar o manipular cualquier marca, logotipo o signo identificativo.</li>
+    </ul>
+    <p>Para cualquier solicitud de uso, contacta a <strong>hello@sergidiaz.com</strong>.</p>
+  </div>
+
+  <!-- 4. Responsabilidad -->
+  <div class="legal-section">
+    <h2><span>04</span> Responsabilidad y exclusión de garantías</h2>
+    <p>El titular del Sitio Web no garantiza la disponibilidad y continuidad del funcionamiento del Sitio Web ni que el contenido esté libre de errores, aunque pone sus mejores esfuerzos en ello.</p>
+    <p>Quedamos exentos de responsabilidad por:</p>
+    <ul>
+      <li>Daños de cualquier naturaleza derivados del uso o imposibilidad de uso del Sitio Web.</li>
+      <li>Contenidos alojados en sitios web de terceros enlazados desde este Sitio Web. Los enlaces externos son meramente informativos.</li>
+      <li>Interrupciones del servicio por causas ajenas a nuestra voluntad (mantenimiento, ataques, fallos de terceros).</li>
+      <li>Virus u otros elementos nocivos introducidos por terceros.</li>
+    </ul>
+
+    <div class="legal-note">
+      <p>La información publicada en este Sitio Web tiene carácter meramente informativo y no constituye asesoramiento legal, fiscal ni de ningún otro tipo. Para decisiones relevantes, consulta con un profesional cualificado.</p>
+    </div>
+  </div>
+
+  <!-- 5. Hipervínculos -->
+  <div class="legal-section">
+    <h2><span>05</span> Política de hipervínculos</h2>
+    <p>El Sitio Web puede contener enlaces a sitios web de terceros. Estos enlaces se facilitan únicamente a título informativo. No somos responsables del contenido, veracidad o legalidad de los sitios enlazados.</p>
+    <p>Si deseas enlazar a este Sitio Web desde el tuyo, deberás cumplir las siguientes condiciones:</p>
+    <ul>
+      <li>No reproducir el Sitio Web ni sus contenidos en el tuyo de forma que pueda inducir a error.</li>
+      <li>No establecer framing o marcos que oculten la URL del Sitio Web.</li>
+      <li>No realizar declaraciones falsas sobre este Sitio Web o su titular.</li>
+      <li>No enlazar desde páginas que difundan contenidos ilícitos o que sean contrarios a la moral o al orden público.</li>
+    </ul>
+  </div>
+
+  <!-- 6. Ley aplicable -->
+  <div class="legal-section">
+    <h2><span>06</span> Ley aplicable y jurisdicción</h2>
+    <p>Las presentes condiciones se rigen por la legislación española. Para la resolución de conflictos que pudieran derivarse del acceso al Sitio Web, las partes se someten expresamente a la jurisdicción de los <strong>Juzgados y Tribunales de Barcelona</strong>, renunciando a cualquier otro fuero que pudiera corresponderles.</p>
+    <p>Normativa de referencia aplicable:</p>
+    <ul>
+      <li><strong>LSSI-CE</strong> — Ley 34/2002 de Servicios de la Sociedad de la Información</li>
+      <li><strong>RGPD</strong> — Reglamento (UE) 2016/679 de Protección de Datos</li>
+      <li><strong>LOPDGDD</strong> — Ley Orgánica 3/2018 de Protección de Datos Personales</li>
+      <li><strong>TRLPI</strong> — Real Decreto Legislativo 1/1996 de Propiedad Intelectual</li>
+    </ul>
+  </div>
+
+  <a href="/" class="back-link">← Volver al inicio</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">Sergio <span>Díaz</span></div>
+  <div class="footer-center">
+    © 2026 Representaciones Pablo &amp; Sergio, SL · CIF B21867304<br>
+    CL Joan Fivaller 28, 08840 Viladecans, Barcelona
+  </div>
+  <ul class="footer-links">
+    <li><a href="/privacidad">Privacidad</a></li>
+    <li><a href="/aviso-legal">Aviso legal</a></li>
+    <li><a href="/cookies">Cookies</a></li>
+  </ul>
+</footer>
+
+<script src="js/nav.js" defer></script>
+</body>
+</html>

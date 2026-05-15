@@ -128,34 +128,26 @@ footer{padding:2.5rem 4rem;border-top:1px solid var(--border2);display:flex;just
 <div class="article-body">
   <a href="index.html" class="back-link">← Volver al blog</a>
  
-  ```html
-<article class="post-body">
+  <article class="post-body">
   <p class="post-lead">OpenAI ha confirmado que Codex llegará a dispositivos móviles, una actualización que cambia cómo gestionamos flujos de trabajo con agentes IA en producción. Como fundador de Luca y Valentina, sistemas que operan 24/7 vía WhatsApp Business API procesando miles de conversaciones diarias, entiendo el valor real de poder modificar código crítico desde cualquier lugar. Codex en móvil no se trata de programar aplicaciones completas desde el teléfono, sino de tener la capacidad de diagnosticar, ajustar y solucionar problemas en workflows automatizados cuando estás fuera de tu escritorio. En este análisis desgloso qué significa esta actualización para quienes construimos y mantenemos sistemas de IA en entornos reales, más allá del ruido mediático.</p>
 
   <h2>Por Qué Codex Móvil Importa para Agentes IA en Producción</h2>
-  
-  <p>Cuando gestionas agentes IA que responden a usuarios reales en tiempo real, los problemas no esperan a que llegues a tu escritorio. He vivido situaciones donde un cambio urgente en un webhook de n8n o un ajuste en los prompts de Claude API resolvería un problema que está afectando a decenas de usuarios. La promesa de Codex en móvil es precisamente esa flexibilidad: poder diagnosticar, entender el contexto del error y aplicar correcciones sin depender de un portátil.</p>
-  
-  <p>OpenAI menciona "enhanced flexibility over how they can manage their workflows", y esto conecta directamente con mi experiencia operando Luca y Valentina. No necesitas escribir una aplicación completa desde un iPhone. Necesitas leer logs, identificar patrones en errores de API, modificar queries SQL en PostgreSQL o ajustar lógica en nodos de n8n cuando detectas que un flujo está fallando. Codex móvil facilita ese tipo de intervención quirúrgica, no programación recreativa.</p>
+  <p>Los agentes IA en producción no respetan horarios de oficina. Valentina procesa consultas de pacientes en madrugadas, Luca responde dudas de residencias a las 6 AM. Cuando un workflow falla o necesita ajuste urgente, cada minuto sin respuesta significa usuarios reales esperando. Hasta ahora, cualquier modificación de código o revisión de logs requería acceso a un ordenador completo. Codex en móvil elimina esa fricción.</p>
+  <p>La flexibilidad que menciona OpenAI se traduce en algo muy concreto: poder acceder a tu entorno n8n desde el móvil, revisar un nodo que está generando errores, usar Codex para escribir la corrección exacta, y aplicarla sin esperar a llegar a casa. No es programar por programar. Es mantener sistemas críticos operativos cuando la situación lo exige.</p>
 
-  <h2>Casos Reales Donde Esta Actualización Marca Diferencia</h2>
-  
-  <p>En Valentina, nuestro agente inmobiliario que gestiona consultas sobre propiedades, hemos tenido casos donde la API de WhatsApp Business devuelve errores 429 por rate limiting. Detectar esto rápido y ajustar la cola de mensajes en n8n puede significar la diferencia entre perder leads cualificados o procesarlos correctamente. Con Codex móvil, ese ajuste ya no requiere abrir un portátil; puedes diagnosticar el problema, revisar el código del workflow y aplicar el cambio desde el móvil.</p>
-
+  <h2>Casos Reales Donde Codex Móvil Cambia el Juego</h2>
+  <p>He enfrentado situaciones donde un cambio menor habría evitado horas de downtime. Con Luca, tuvimos un caso donde la API de WhatsApp cambió sutilmente el formato de un campo en webhooks. El sistema seguía recibiendo mensajes pero no procesaba correctamente ciertos tipos de archivos adjuntos. Detectarlo desde Grafana en el móvil fue rápido. Solucionarlo requirió acceso SSH desde un portátil prestado en un coworking.</p>
   <ul>
-    <li><strong>Debugging de webhooks:</strong> Revisar payloads entrantes de WhatsApp Business API y validar si el parsing está fallando por cambios en la estructura de datos.</li>
-    <li><strong>Ajustes en prompts:</strong> Modificar system prompts en Claude API cuando detectas que las respuestas del agente se desvían del tono o formato esperado.</li>
-    <li><strong>Monitoreo de bases de datos:</strong> Ejecutar queries en PostgreSQL para identificar cuellos de botella o registros huérfanos que bloquean el flujo de trabajo.</li>
-    <li><strong>Gestión de errores en Docker:</strong> Revisar logs de contenedores y reiniciar servicios específicos cuando un microservicio falla sin necesidad de SSH desde un equipo completo.</li>
+    <li><strong>Diagnóstico inmediato de errores en producción</strong> — Ver logs de PostgreSQL, identificar qué query falla, y generar la corrección con Codex sin cambiar de dispositivo.</li>
+    <li><strong>Ajustes de prompts en Claude API</strong> — Cuando un agente responde fuera de tono o pierde contexto, modificar el system prompt desde el móvil y redeploy del workflow en segundos.</li>
+    <li><strong>Gestión de rate limits y throttling</strong> — Si un pico de tráfico satura tu instancia n8n, escribir código para redistribuir carga o pausar temporalmente endpoints no críticos.</li>
   </ul>
 
-  <h2>Qué No Cambia: La Importancia de Arquitectura Sólida</h2>
-  
-  <p>Codex móvil no reemplaza una arquitectura bien diseñada. Si tus flujos de n8n dependen de lógica frágil, si tus prompts en Claude API no están versionados, si tu PostgreSQL no tiene índices correctos o si Docker no tiene logging adecuado, ninguna herramienta móvil salvará tu sistema. La flexibilidad que OpenAI ofrece con Codex móvil es valiosa únicamente si construiste una base que permita intervenciones quirúrgicas sin romper todo. En Luca y Valentina, cada workflow crítico tiene rollback, cada prompt tiene historial y cada query tiene timeouts. Eso me permite aprovechar Codex móvil como herramienta de respuesta rápida, no como muleta para arquitectura deficiente.</p>
+  <h2>La Trampa de la Dependencia y Qué Hacer al Respecto</h2>
+  <p>Codex móvil no debe convertirse en excusa para arquitecturas frágiles. Si tu sistema requiere intervención manual constante, el problema no es la falta de herramientas móviles, es un diseño deficiente. La clave está en usar esta capacidad para casos excepcionales, no como operación estándar. Mis agentes IA tienen monitoreo con Grafana, alertas configuradas, y rollback automático en despliegues. Codex en móvil es el último recurso cuando todo lo demás falló, o cuando necesito implementar algo urgente que no puede esperar. Esa distinción importa. Construye robusto primero, optimiza accesibilidad después.</p>
 
   <p class="post-source">Fuente: <a href="https://openai.com" target="_blank" rel="noopener">OpenAI</a></p>
 </article>
-```
  
   <div class="article-cta">
     <h3>¿Tienes un proyecto<br>con <em>IA?</em></h3>

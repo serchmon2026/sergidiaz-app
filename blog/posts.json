@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "openai-demanda-apple-integraciones-ia-control-producto",
+    "titulo": "OpenAI demanda a Apple: lecciones sobre integraciones de IA y control de producto",
+    "excerpt": "OpenAI preparando acciones legales contra Apple revela algo más profundo sobre el control de producto en integraciones de IA.",
+    "fecha": "12 Mayo 2026",
+    "fecha_iso": "2026-05-12",
+    "minutos": 5,
+    "tags": ["OpenAI", "Apple", "Agentes IA", "Producción"]
+  },
+  {
+    "slug": "codex-movil-agentes-ia-produccion",
+    "titulo": "Codex en Móvil: Qué Significa para Agentes IA en Producción",
+    "excerpt": "OpenAI ha confirmado que Codex llegará a dispositivos móviles, una actualización que cambia cómo gestionamos flujos de trabajo con agentes IA en producción.",
+    "fecha": "05 Mayo 2026",
+    "fecha_iso": "2026-05-05",
+    "minutos": 5,
+    "tags": ["Codex", "OpenAI", "Agentes IA", "Producción"]
+  },
+  {
+    "slug": "que-es-agente-ia-coste-espana",
+    "titulo": "¿Qué es un agente IA y cuánto cuesta en España?",
+    "excerpt": "La diferencia real entre chatbot y agente IA, qué puede hacer un agente en producción y los rangos de precio honestos para 2026. Sin marketing, con datos reales.",
+    "fecha": "28 Abril 2026",
+    "fecha_iso": "2026-04-28",
+    "minutos": 6,
+    "tags": ["Agentes IA", "Precios", "España", "Guía"]
+  },
+  {
+    "slug": "automatizar-whatsapp-n8n-claude-api",
+    "titulo": "Cómo automatizar WhatsApp con n8n y Claude API",
+    "excerpt": "La arquitectura real que uso en Luca y Valentina: webhook de Meta, n8n como orquestador, Claude como inteligencia y PostgreSQL como memoria. Con código y costes reales.",
+    "fecha": "14 Abril 2026",
+    "fecha_iso": "2026-04-14",
+    "minutos": 7,
+    "tags": ["WhatsApp API", "n8n", "Claude API", "Producción"]
+  }
+]

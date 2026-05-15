@@ -1,121 +1,183 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Codex en Móvil: Qué Significa para Agentes IA en Producción | Sergio Díaz</title>
-  <meta name="description" content="OpenAI ha confirmado que Codex llegará a dispositivos móviles, una actualización que cambia cómo gestionamos flujos de trabajo con agentes IA en producción" />
-  <meta name="keywords" content="Codex móvil agentes IA, agentes IA, automatización, n8n, Claude API" />
-  <meta name="author" content="Sergio Díaz" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://sergidiaz.com/blog/codex-movil-agentes-ia-produccion.html" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Codex en Móvil: Qué Significa para Agentes IA en Producción | Sergio Díaz" />
-  <meta property="og:description" content="OpenAI ha confirmado que Codex llegará a dispositivos móviles, una actualización que cambia cómo gestionamos flujos de trabajo con agentes IA en producción" />
-  <meta property="og:url" content="https://sergidiaz.com/blog/codex-movil-agentes-ia-produccion.html" />
-  <meta property="og:site_name" content="Sergio Díaz" />
-  <meta property="og:locale" content="es_ES" />
-  <meta property="article:published_time" content="2026-05-15" />
-  <meta property="article:author" content="Sergio Díaz" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Codex en Móvil: Qué Significa para Agentes IA en Producción | Sergio Díaz" />
-  <meta name="twitter:description" content="OpenAI ha confirmado que Codex llegará a dispositivos móviles, una actualización que cambia cómo gestionamos flujos de trabajo con agentes IA en producción" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Codex en Móvil: Qué Significa para Agentes IA en Producción | Sergio Díaz",
-    "description": "OpenAI ha confirmado que Codex llegará a dispositivos móviles, una actualización que cambia cómo gestionamos flujos de trabajo con agentes IA en producción",
-    "url": "https://sergidiaz.com/blog/codex-movil-agentes-ia-produccion.html",
-    "datePublished": "2026-05-15",
-    "dateModified": "2026-05-15",
-    "author": {
-      "@type": "Person",
-      "name": "Sergio Díaz",
-      "url": "https://sergidiaz.com",
-      "jobTitle": "AI Product Builder"
-    },
-    "publisher": {
-      "@type": "Person",
-      "name": "Sergio Díaz",
-      "url": "https://sergidiaz.com"
-    },
-    "keywords": "Codex móvil agentes IA",
-    "inLanguage": "es-ES"
-  }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Fraunces:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/style.css" />
-  <link rel="stylesheet" href="/css/blog.css" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Codex en Móvil: Qué Significa para Agentes IA en Producción | Sergio Díaz</title>
+<meta name="description" content="OpenAI ha confirmado que Codex llegará a dispositivos móviles, una actualización que cambia cómo gestionamos flujos de trabajo con agentes IA en producción"/>
+<meta name="keywords" content="Codex móvil agentes IA, agentes IA, automatización, n8n, Claude API"/>
+<meta name="author" content="Sergio Díaz"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://sergidiaz.com/blog/codex-movil-agentes-ia-produccion.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Codex en Móvil: Qué Significa para Agentes IA en Producción | Sergio Díaz"/>
+<meta property="og:description" content="OpenAI ha confirmado que Codex llegará a dispositivos móviles, una actualización que cambia cómo gestionamos flujos de trabajo con agentes IA en producción"/>
+<meta property="og:url" content="https://sergidiaz.com/blog/codex-movil-agentes-ia-produccion.html"/>
+<meta property="og:site_name" content="Sergio Díaz"/>
+<meta property="og:locale" content="es_ES"/>
+<meta property="article:published_time" content="2026-05-15"/>
+<meta property="article:author" content="Sergio Díaz"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Codex en Móvil: Qué Significa para Agentes IA en Producción | Sergio Díaz"/>
+<meta name="twitter:description" content="OpenAI ha confirmado que Codex llegará a dispositivos móviles, una actualización que cambia cómo gestionamos flujos de trabajo con agentes IA en producción"/>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Codex en Móvil: Qué Significa para Agentes IA en Producción | Sergio Díaz",
+  "description": "OpenAI ha confirmado que Codex llegará a dispositivos móviles, una actualización que cambia cómo gestionamos flujos de trabajo con agentes IA en producción",
+  "url": "https://sergidiaz.com/blog/codex-movil-agentes-ia-produccion.html",
+  "datePublished": "2026-05-15",
+  "dateModified": "2026-05-15",
+  "author": {"@type": "Person", "name": "Sergio Díaz", "url": "https://sergidiaz.com", "jobTitle": "AI Product Builder"},
+  "publisher": {"@type": "Person", "name": "Sergio Díaz", "url": "https://sergidiaz.com"},
+  "keywords": "Codex móvil agentes IA",
+  "inLanguage": "es-ES"
+}</script>
+<link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Fraunces:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#080808;--bg2:#0F0F0F;--bg3:#161616;--text:#F0EDE8;--muted:#5A5652;--accent:#D4A853;--border:rgba(212,168,83,0.12);--border2:rgba(240,237,232,0.08);--font-display:'Fraunces',serif;--font-sans:'Syne',sans-serif;--font-mono:'DM Mono',monospace}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--text);font-family:var(--font-sans);font-weight:400;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 4rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:all 0.4s}
+nav.scrolled{background:rgba(8,8,8,0.92);backdrop-filter:blur(12px);border-color:var(--border2)}
+.nav-name{font-family:var(--font-display);font-style:italic;font-weight:300;font-size:1.2rem;color:var(--text);display:flex;align-items:center;gap:0.75rem}
+.nav-name span{color:var(--accent)}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{padding:0.6rem 1.5rem;border:1px solid var(--accent);color:var(--accent)!important;font-size:0.72rem!important;letter-spacing:0.15em!important;text-transform:uppercase;transition:all 0.3s!important}
+.nav-cta:hover{background:var(--accent)!important;color:var(--bg)!important}
+.article-hero{padding:10rem 4rem 4rem;border-bottom:1px solid var(--border2);max-width:860px;margin:0 auto}
+.article-meta{font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.2em;color:var(--accent);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem}
+.article-meta::before{content:'';width:24px;height:1px;background:var(--accent)}
+.article-title{font-family:var(--font-display);font-weight:300;font-size:clamp(2rem,4vw,3.5rem);line-height:1.1;letter-spacing:-0.02em;margin-bottom:1.25rem}
+.article-title em{font-style:italic;color:var(--accent)}
+.article-intro{font-size:1rem;line-height:1.8;color:var(--muted);max-width:680px}
+.article-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem}
+.tag{font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;padding:0.3rem 0.8rem;border:1px solid var(--border2);color:var(--muted)}
+.article-body{max-width:720px;margin:0 auto;padding:4rem 4rem 8rem}
+.article-body h2{font-family:var(--font-display);font-weight:300;font-size:1.8rem;color:var(--text);margin:3rem 0 1.25rem;line-height:1.2}
+.article-body h2 em{font-style:italic;color:var(--accent)}
+.article-body h3{font-family:var(--font-sans);font-weight:600;font-size:1rem;color:var(--text);margin:2rem 0 0.75rem;letter-spacing:0.05em}
+.article-body p{font-size:0.92rem;line-height:1.9;color:var(--muted);margin-bottom:1.25rem}
+.article-body p strong{color:var(--text);font-weight:500}
+.article-body ul{list-style:none;margin:1rem 0 1.5rem;display:flex;flex-direction:column;gap:0.6rem}
+.article-body ul li{font-family:var(--font-mono);font-size:0.8rem;color:var(--muted);padding-left:1.5rem;position:relative;line-height:1.6}
+.article-body ul li::before{content:'→';color:var(--accent);position:absolute;left:0}
+.article-body ul li strong{color:var(--text)}
+.article-body a{color:var(--accent);border-bottom:1px solid rgba(212,168,83,0.3);transition:border-color 0.2s}
+.article-body a:hover{border-color:var(--accent)}
+.post-source{font-family:var(--font-mono);font-size:0.72rem;color:var(--muted);margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border2)}
+.back-link{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--font-mono);font-size:0.68rem;color:var(--muted);letter-spacing:0.1em;margin-bottom:3rem;transition:color 0.2s}
+.back-link:hover{color:var(--accent)}
+.article-cta{background:var(--bg3);border:1px solid var(--border2);padding:3rem;margin:4rem 0 0;text-align:center}
+.article-cta h3{font-family:var(--font-display);font-weight:300;font-size:1.8rem;margin-bottom:0.75rem}
+.article-cta h3 em{font-style:italic;color:var(--accent)}
+.article-cta p{font-size:0.85rem;color:var(--muted);margin-bottom:2rem;line-height:1.7}
+.btn-primary{display:inline-flex;align-items:center;gap:0.75rem;background:var(--accent);color:#080808;padding:1rem 2.5rem;font-family:"Syne",sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;transition:all 0.3s}
+.btn-primary:hover{background:var(--text)}
+.article-body a.btn-primary,.article-cta a.btn-primary{color:#080808!important;border-bottom:none!important}
+footer{padding:2.5rem 4rem;border-top:1px solid var(--border2);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-left{font-family:var(--font-display);font-style:italic;font-size:1rem;font-weight:300;color:var(--muted)}
+.footer-left span{color:var(--accent)}
+.footer-center{font-family:var(--font-mono);font-size:0.62rem;color:var(--muted)}
+.footer-links{display:flex;gap:2rem;list-style:none}
+.footer-links a{font-family:var(--font-mono);font-size:0.62rem;color:var(--muted);letter-spacing:0.1em;transition:color 0.2s}
+.footer-links a:hover{color:var(--accent)}
+@media(max-width:1024px){
+  nav{padding:1.25rem 2rem}
+  .nav-links{display:none}
+  .article-hero{padding:8rem 2rem 3rem}
+  .article-body{padding:3rem 2rem 6rem}
+  footer{padding:2rem;flex-direction:column;text-align:center}
+}
+</style>
 </head>
 <body>
+ 
 <nav id="nav">
-  <a href="/" class="nav-name">Sergio <span>Díaz</span></a>
+  <a href="../index.html" class="nav-name">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="30" height="30"><rect width="80" height="80" fill="#080808"/><path d="M6,6 L6,12 M6,6 L12,6" fill="none" stroke="#D4A853" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/><path d="M74,6 L74,12 M74,6 L68,6" fill="none" stroke="#D4A853" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/><path d="M6,74 L6,68 M6,74 L12,74" fill="none" stroke="#D4A853" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/><path d="M74,74 L74,68 M74,74 L68,74" fill="none" stroke="#D4A853" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/><line x1="8" y1="42" x2="32" y2="42" stroke="#D4A853" stroke-width="0.7" opacity="0.3"/><line x1="48" y1="42" x2="72" y2="42" stroke="#D4A853" stroke-width="0.7" opacity="0.3"/><circle cx="40" cy="42" r="5" fill="none" stroke="#D4A853" stroke-width="0.7" opacity="0.22"/><circle cx="40" cy="42" r="2.5" fill="#D4A853"/><text x="40" y="52" font-family="Georgia,serif" font-style="italic" font-weight="300" font-size="40" fill="#F0EDE8" text-anchor="middle" dominant-baseline="alphabetic" letter-spacing="-1.5" opacity="0.93">sd</text></svg>
+    Sergio <span>Díaz</span>
+  </a>
   <ul class="nav-links">
-    <li><a href="/#proyectos">Proyectos</a></li>
-    <li><a href="/#servicios">Servicios</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    <li><a href="/#contacto" class="nav-cta">Hablemos</a></li>
+    <li><a href="../index.html#proyectos">Proyectos</a></li>
+    <li><a href="../index.html#servicios">Servicios</a></li>
+    <li><a href="index.html">Blog</a></li>
+    <li><a href="../index.html#contacto" class="nav-cta">Hablemos</a></li>
   </ul>
 </nav>
-<main class="post-main">
-  <div class="post-header">
-    <div class="post-meta">
-      <span class="post-date">15 Mayo 2026</span>
-      <span class="post-reading">· 5 min</span>
-    </div>
-    <h1 class="post-title">Codex en Móvil: Qué Significa para Agentes IA en Producción</h1>
-    <div class="post-tags">
-      <span class="post-tag">codex</span>
-        <span class="post-tag">openai</span>
-        <span class="post-tag">agentes-ia</span>
-        <span class="post-tag">desarrollo-movil</span>
-        <span class="post-tag">automatizacion</span>
-    </div>
-    <a href="/blog/" class="post-back">← Volver al blog</a>
+ 
+<div class="article-hero">
+  <div class="article-meta">Blog · 15 Mayo 2026 · 5 min lectura</div>
+  <h1 class="article-title">Codex en Móvil: Qué Significa para Agentes IA en Producción</h1>
+  <p class="article-intro">OpenAI ha confirmado que Codex llegará a dispositivos móviles, una actualización que cambia cómo gestionamos flujos de trabajo con agentes IA en producción. Como fundador de Luca y Valentina, sistemas que operan 24/7 vía WhatsApp Business API procesando miles de conversaciones diarias, entiendo el valor real de poder modificar código crítico desde cualquier lugar. Codex en móvil no se trata de programar aplicaciones completas desde el teléfono, sino de tener la capacidad de diagnosticar, ajustar y solucionar problemas en workflows automatizados cuando estás fuera de tu escritorio. En este análisis desgloso qué significa esta actualización para quienes construimos y mantenemos sistemas de IA en entornos reales, más allá del ruido mediático.</p>
+  <div class="article-tags">
+    <span class="tag">codex</span>
+    <span class="tag">openai</span>
+    <span class="tag">agentes-ia</span>
+    <span class="tag">desarrollo-movil</span>
+    <span class="tag">automatizacion</span>
   </div>
-  <div class="post-content">
-    ```html
+</div>
+ 
+<div class="article-body">
+  <a href="index.html" class="back-link">← Volver al blog</a>
+ 
+  ```html
 <article class="post-body">
   <p class="post-lead">OpenAI ha confirmado que Codex llegará a dispositivos móviles, una actualización que cambia cómo gestionamos flujos de trabajo con agentes IA en producción. Como fundador de Luca y Valentina, sistemas que operan 24/7 vía WhatsApp Business API procesando miles de conversaciones diarias, entiendo el valor real de poder modificar código crítico desde cualquier lugar. Codex en móvil no se trata de programar aplicaciones completas desde el teléfono, sino de tener la capacidad de diagnosticar, ajustar y solucionar problemas en workflows automatizados cuando estás fuera de tu escritorio. En este análisis desgloso qué significa esta actualización para quienes construimos y mantenemos sistemas de IA en entornos reales, más allá del ruido mediático.</p>
 
-  <h2>Por qué Codex móvil agentes IA cambia la operativa real</h2>
-  <p>La disponibilidad de Codex en dispositivos móviles responde a una necesidad concreta: los sistemas de IA en producción no fallan en horario de oficina. He tenido que modificar flujos de n8n desde el móvil cuando un endpoint de Claude API devolvía errores inesperados a las 23:00. La diferencia entre resolverlo en 10 minutos o esperar hasta el día siguiente puede significar cientos de conversaciones bloqueadas. Codex móvil permite revisar logs, ajustar prompts o modificar lógica de validación sin necesidad de un entorno de desarrollo completo.</p>
-  <p>No estamos hablando de escribir servicios completos. Se trata de tener acceso inmediato a capacidades de análisis de código, depuración y ajustes quirúrgicos. Cuando Valentina procesa solicitudes de usuarios finales vía WhatsApp y surge un edge case no contemplado, poder iterar sobre la solución desde el móvil marca la diferencia entre servicio interrumpido y continuidad operativa.</p>
+  <h2>Por Qué Codex Móvil Importa Para Agentes IA en Producción</h2>
+  
+  <p>Cuando operas agentes IA que procesan conversaciones reales, los problemas no esperan a que vuelvas al ordenador. En Luca, que gestiona consultas inmobiliarias las 24 horas, he tenido que solucionar errores de integración con la API de WhatsApp Business un domingo por la tarde desde el móvil. Hasta ahora, esto significaba acceso remoto vía VNC o editar archivos de configuración en nano desde una terminal SSH móvil. Codex en móvil elimina esa fricción: puedes revisar logs, identificar el punto de fallo en un flujo de n8n, y ajustar la lógica de manejo de respuestas directamente.</p>
 
-  <h2>Casos de uso reales en workflows automatizados</h2>
-  <p>En Luca y Valentina, los workflows críticos combinan n8n, Claude API y PostgreSQL. Los puntos donde Codex móvil aporta valor directo son:</p>
+  <p>La mejora no está en escribir sistemas completos desde cero en una pantalla de 6 pulgadas. Está en la capacidad de intervenir cuando un nodo de tu workflow falla, cuando una respuesta de Claude API devuelve un formato inesperado, o cuando necesitas modificar un prompt que está generando outputs incorrectos en producción. Para productos como Valentina, donde cada conversación mal gestionada puede significar perder un lead cualificado, reducir el tiempo de respuesta ante incidencias es crítico.</p>
+
+  <h2>Casos de Uso Reales Desde Mi Stack de Producción</h2>
+  
+  <p>Trabajo con n8n para orquestar workflows que conectan WhatsApp Business API, Claude API y PostgreSQL. Cuando un flujo se rompe, necesitas diagnosticar rápido: ¿falla la query SQL? ¿El prompt está mal formateado? ¿El webhook no está recibiendo el payload correcto? Con Codex móvil, estos son los escenarios donde veo impacto directo:</p>
+
   <ul>
-    <li>Revisión de respuestas de Claude API cuando un prompt genera outputs inesperados: ajustar temperatura, max_tokens o system message sin acceder al servidor.</li>
-    <li>Modificación de queries SQL para corregir errores de filtrado o agregación que afectan a la lógica de negocio en producción.</li>
-    <li>Análisis de logs de Docker cuando un contenedor presenta comportamiento anómalo: identificar qué parte del flujo está fallando y proponer correcciones.</li>
-    <li>Documentación inmediata de incidencias: generar explicaciones técnicas de errores para compartir con el equipo o actualizar runbooks.</li>
+    <li><strong>Ajustar prompts en caliente:</strong> Modificar instrucciones de Claude sin redeployar contenedores Docker completos. En Senerva, adaptar el tono de respuesta según feedback de usuarios en producción.</li>
+    <li><strong>Corregir queries PostgreSQL:</strong> Un índice que no funciona como esperabas ralentiza las consultas. Desde el móvil, optimizar la query y verificar el impacto en tiempo real.</li>
+    <li><strong>Diagnosticar webhooks rotos:</strong> Revisar logs de n8n, identificar qué campo falta en el payload de WhatsApp, y ajustar la transformación de datos sin esperar a estar frente al escritorio.</li>
   </ul>
 
-  <h2>Limitaciones reales vs expectativas infladas</h2>
-  <p>Codex en móvil no reemplaza un entorno de desarrollo. No vas a refactorizar arquitecturas completas ni a desplegar nuevas versiones de agentes IA desde el teléfono. Lo que sí ofrece es capacidad de respuesta ante incidencias específicas. Para sistemas que operan con WhatsApp Business API procesando miles de mensajes diarios, esta capacidad de intervención rápida reduce tiempos de resolución de horas a minutos. La clave está en entender que es una herramienta de mantenimiento y diagnóstico, no de desarrollo greenfield. Si tus agentes IA están en producción y gestionas workflows críticos, Codex móvil es una actualización que mejora directamente tu capacidad operativa. Si esperas programar desde cero aplicaciones complejas en el móvil, vas a decepcionarte.</p>
+  <h2>Limitaciones y Realismo Técnico</h2>
+  
+  <p>No vas a refactorizar una arquitectura de microservicios desde el iPhone. Codex móvil no reemplaza un entorno de desarrollo completo. Pero sí reduce la brecha entre detectar un problema y solucionarlo. Para equipos pequeños o founders técnicos que mantienen infraestructura crítica, esta flexibilidad es la diferencia entre 10 minutos de downtime y 2 horas esperando llegar a casa. En mi caso, operar sistemas que procesan conversaciones comerciales reales significa que cada hora de inactividad tiene coste directo. Codex en móvil no es una revolución, es una herramienta de respuesta rápida que hace tu operación más resiliente.</p>
 
   <p class="post-source">Fuente: <a href="https://openai.com" target="_blank" rel="noopener">OpenAI</a></p>
 </article>
 ```
+ 
+  <div class="article-cta">
+    <h3>¿Tienes un proyecto<br>con <em>IA?</em></h3>
+    <p>Primera conversación sin coste. Te digo honestamente si puedo ayudarte y cómo lo haría. Sin compromiso.</p>
+    <a href="../index.html#contacto" class="btn-primary">Hablemos →</a>
   </div>
-</main>
-<section class="contacto" id="contacto">
-  <div class="contacto-bg"></div>
-  <div class="contacto-label">¿Tienes un proyecto con IA?</div>
-  <h2 class="contacto-title">Hablemos <em>sin compromiso</em></h2>
-  <a href="mailto:hello@sergidiaz.com" class="contacto-email">hello@sergidiaz.com</a>
-  <a href="mailto:hello@sergidiaz.com" class="btn-primary">Escribir ahora →</a>
-</section>
+</div>
+ 
 <footer>
   <div class="footer-left">Sergio <span>Díaz</span></div>
   <div class="footer-center">© 2026 Representaciones Pablo & Sergio, SL · CIF B21867304</div>
   <ul class="footer-links">
-    <li><a href="/privacidad">Privacidad</a></li>
-    <li><a href="/aviso-legal">Aviso legal</a></li>
+    <li><a href="../privacidad.html">Privacidad</a></li>
+    <li><a href="../aviso-legal.html">Aviso legal</a></li>
+    <li><a href="../cookies.html">Cookies</a></li>
   </ul>
 </footer>
-<script src="/js/main.js"></script>
+ 
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>50);},{passive:true});
+})();
+</script>
 </body>
 </html>

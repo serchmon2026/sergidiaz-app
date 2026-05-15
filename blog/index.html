@@ -25,16 +25,12 @@ nav.scrolled{background:rgba(8,8,8,0.92);backdrop-filter:blur(12px);border-color
 .nav-links a:hover,.nav-links a.active{color:var(--text)}
 .nav-cta{padding:0.6rem 1.5rem;border:1px solid var(--accent);color:var(--accent)!important;font-size:0.72rem!important;letter-spacing:0.15em!important;text-transform:uppercase;transition:all 0.3s!important}
 .nav-cta:hover{background:var(--accent)!important;color:var(--bg)!important}
-
-/* Hero blog */
 .blog-hero{padding:10rem 4rem 5rem;border-bottom:1px solid var(--border2)}
 .section-label{font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem}
 .section-label::before{content:'';width:24px;height:1px;background:var(--accent)}
 .blog-title{font-family:var(--font-display);font-weight:300;font-size:clamp(2.5rem,5vw,5rem);line-height:1;letter-spacing:-0.02em;margin-bottom:1rem}
 .blog-title em{font-style:italic;color:var(--accent)}
 .blog-sub{font-family:var(--font-mono);font-size:0.82rem;color:var(--muted);line-height:1.7;max-width:560px}
-
-/* Grid artículos */
 .blog-grid{padding:6rem 4rem 8rem;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border2)}
 .article-card{background:var(--bg);padding:3rem;position:relative;overflow:hidden;transition:background 0.3s;display:block}
 .article-card:hover{background:var(--bg3)}
@@ -43,22 +39,19 @@ nav.scrolled{background:rgba(8,8,8,0.92);backdrop-filter:blur(12px);border-color
 .card-meta{font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.2em;color:var(--accent);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.75rem}
 .card-dot{width:5px;height:5px;background:var(--accent);border-radius:50%}
 .card-title{font-family:var(--font-display);font-weight:300;font-size:1.6rem;color:var(--text);margin-bottom:0.5rem;line-height:1.2}
-.card-title em{font-style:italic;color:var(--accent)}
 .card-excerpt{font-size:0.82rem;line-height:1.7;color:var(--muted);margin-bottom:1.5rem}
 .card-tags{display:flex;flex-wrap:wrap;gap:0.4rem}
 .card-tag{font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.1em;padding:0.25rem 0.6rem;border:1px solid var(--border2);color:var(--muted);transition:all 0.2s}
 .article-card:hover .card-tag{border-color:var(--border);color:var(--text)}
 .card-arrow{position:absolute;top:2.5rem;right:2.5rem;font-family:var(--font-mono);font-size:0.65rem;color:var(--muted);transition:all 0.2s}
 .article-card:hover .card-arrow{color:var(--accent);transform:translate(3px,-3px)}
-
-/* CTA */
+.blog-loading{padding:6rem 4rem;text-align:center;font-family:var(--font-mono);font-size:0.75rem;color:var(--muted);letter-spacing:0.1em}
 .blog-cta{padding:6rem 4rem;border-top:1px solid var(--border2);display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
 .cta-title{font-family:var(--font-display);font-weight:300;font-size:clamp(1.8rem,3vw,3rem);line-height:1.2}
 .cta-title em{font-style:italic;color:var(--accent)}
 .cta-right p{font-size:0.88rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem}
 .btn-primary{display:inline-flex;align-items:center;gap:0.75rem;background:var(--accent);color:#080808;padding:1rem 2.5rem;font-family:"Syne",sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;transition:all 0.3s}
 .btn-primary:hover{background:var(--text)}
-
 footer{padding:2.5rem 4rem;border-top:1px solid var(--border2);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .footer-left{font-family:var(--font-display);font-style:italic;font-size:1rem;font-weight:300;color:var(--muted)}
 .footer-left span{color:var(--accent)}
@@ -95,36 +88,8 @@ footer{padding:2.5rem 4rem;border-top:1px solid var(--border2);display:flex;just
   <p class="blog-sub">Artículos prácticos desde la experiencia de construir productos de IA reales — no demos, no teoría. Lo que aprendo cada día llevando Luca, Valentina, Senerva y Antonio en producción.</p>
 </div>
 
-<div class="blog-grid">
-
-  <!-- Artículo 1 -->
-  <a href="automatizar-whatsapp-n8n-claude-api.html" class="article-card">
-    <div class="card-meta"><div class="card-dot"></div>14 Abril 2026 · 7 min</div>
-    <div class="card-arrow">↗</div>
-    <h2 class="card-title">Cómo automatizar WhatsApp<br>con <em>n8n y Claude API</em></h2>
-    <p class="card-excerpt">La arquitectura real que uso en Luca y Valentina: webhook de Meta, n8n como orquestador, Claude como inteligencia y PostgreSQL como memoria. Con código y costes reales.</p>
-    <div class="card-tags">
-      <span class="card-tag">WhatsApp API</span>
-      <span class="card-tag">n8n</span>
-      <span class="card-tag">Claude API</span>
-      <span class="card-tag">Producción</span>
-    </div>
-  </a>
-
-  <!-- Artículo 2 -->
-  <a href="que-es-agente-ia-coste-espana.html" class="article-card">
-    <div class="card-meta"><div class="card-dot"></div>28 Abril 2026 · 6 min</div>
-    <div class="card-arrow">↗</div>
-    <h2 class="card-title">¿Qué es un agente IA<br>y cuánto cuesta en <em>España?</em></h2>
-    <p class="card-excerpt">La diferencia real entre chatbot y agente IA, qué puede hacer un agente en producción y los rangos de precio honestos para 2026. Sin marketing, con datos reales.</p>
-    <div class="card-tags">
-      <span class="card-tag">Agentes IA</span>
-      <span class="card-tag">Precios</span>
-      <span class="card-tag">España</span>
-      <span class="card-tag">Guía</span>
-    </div>
-  </a>
-
+<div id="blog-grid" class="blog-grid">
+  <div class="blog-loading">Cargando artículos...</div>
 </div>
 
 <div class="blog-cta">
@@ -136,7 +101,7 @@ footer{padding:2.5rem 4rem;border-top:1px solid var(--border2);display:flex;just
 </div>
 
 <footer>
-  <div class="footer-left">Flows <span>Lab</span></div>
+  <div class="footer-left">Sergio <span>Díaz</span></div>
   <div class="footer-center" style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted)">© 2026 Sergio Díaz · Todos los derechos reservados</div>
   <ul class="footer-links">
     <li><a href="../privacidad.html">Privacidad</a></li>
@@ -147,8 +112,35 @@ footer{padding:2.5rem 4rem;border-top:1px solid var(--border2);display:flex;just
 
 <script>
 (function(){
-  var nav=document.getElementById('nav');
-  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>50);},{passive:true});
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  }, {passive: true});
+
+  fetch('posts.json?v=' + Date.now())
+    .then(function(r){ return r.json(); })
+    .then(function(posts){
+      var grid = document.getElementById('blog-grid');
+      if (!posts || posts.length === 0) {
+        grid.innerHTML = '<div class="blog-loading">No hay artículos publicados aún.</div>';
+        return;
+      }
+      grid.innerHTML = posts.map(function(p){
+        var tagsHtml = (p.tags || []).map(function(t){
+          return '<span class="card-tag">' + t + '</span>';
+        }).join('');
+        return '<a href="' + p.slug + '.html" class="article-card">' +
+          '<div class="card-meta"><div class="card-dot"></div>' + p.fecha + ' · ' + p.minutos + ' min</div>' +
+          '<div class="card-arrow">↗</div>' +
+          '<h2 class="card-title">' + p.titulo + '</h2>' +
+          '<p class="card-excerpt">' + p.excerpt + '</p>' +
+          '<div class="card-tags">' + tagsHtml + '</div>' +
+          '</a>';
+      }).join('');
+    })
+    .catch(function(){
+      document.getElementById('blog-grid').innerHTML = '<div class="blog-loading">Error cargando artículos.</div>';
+    });
 })();
 </script>
 </body>

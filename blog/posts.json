@@ -1,5 +1,21 @@
 [
   {
+    "slug": "figma-agente-ia-canvas-colaborativo",
+    "titulo": "Agente IA en Figma: automatización real o generación decorativa",
+    "excerpt": "Figma acaba de lanzar un agente IA integrado en su canvas colaborativo. La novedad no está en generar diseños con prompts — eso ya lo hacen otras herramien",
+    "fecha": "20 Mayo 2026",
+    "fecha_iso": "2026-05-20",
+    "minutos": 5,
+    "tags": [
+      "agentes-ia",
+      "figma",
+      "product-design",
+      "no-code",
+      "automatizacion-diseno"
+    ],
+    "image_url": "https://sergidiaz.com/blog/images/figma-agente-ia-canvas-colaborativo.jpg"
+  },
+  {
     "slug": "openai-opv-septiembre-2026",
     "titulo": "OpenAI OPV Septiembre 2026: Qué Cambia Para Desarrolladores de IA",
     "excerpt": "OpenAI prepara su OPV para septiembre de 2026, justo después de que Elon Musk perdiera la demanda que amenazaba su estructura corporativa. Llevo dos años c",

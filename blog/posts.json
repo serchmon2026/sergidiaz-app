@@ -1,12 +1,33 @@
 [
   {
+    "slug": "workflow-claude-code-boris-cherny-agentes-ia",
+    "titulo": "Workflow de Claude Code: Boris Cherny revela cómo construir agentes IA",
+    "excerpt": "Boris Cherny acaba de hacer algo que pocos líderes técnicos se atreven: revelar públicamente su workflow real de desarrollo con Claude Code, el agente de I",
+    "fecha": "20 Mayo 2026",
+    "fecha_iso": "2026-05-20",
+    "minutos": 5,
+    "tags": [
+      "claude-code",
+      "anthropic",
+      "agentes-ia",
+      "desarrollo-ia",
+      "workflow-desarrollo"
+    ],
+    "image_url": ""
+  },
+  {
     "slug": "openai-demanda-apple-integraciones-ia-control-producto",
     "titulo": "OpenAI demanda a Apple: lecciones sobre integraciones de IA y control de producto",
     "excerpt": "OpenAI preparando acciones legales contra Apple revela algo más profundo sobre el control de producto en integraciones de IA.",
     "fecha": "12 Mayo 2026",
     "fecha_iso": "2026-05-12",
     "minutos": 5,
-    "tags": ["OpenAI", "Apple", "Agentes IA", "Producción"]
+    "tags": [
+      "OpenAI",
+      "Apple",
+      "Agentes IA",
+      "Producción"
+    ]
   },
   {
     "slug": "codex-movil-agentes-ia-produccion",
@@ -15,7 +36,12 @@
     "fecha": "05 Mayo 2026",
     "fecha_iso": "2026-05-05",
     "minutos": 5,
-    "tags": ["Codex", "OpenAI", "Agentes IA", "Producción"]
+    "tags": [
+      "Codex",
+      "OpenAI",
+      "Agentes IA",
+      "Producción"
+    ]
   },
   {
     "slug": "que-es-agente-ia-coste-espana",
@@ -24,7 +50,12 @@
     "fecha": "28 Abril 2026",
     "fecha_iso": "2026-04-28",
     "minutos": 6,
-    "tags": ["Agentes IA", "Precios", "España", "Guía"]
+    "tags": [
+      "Agentes IA",
+      "Precios",
+      "España",
+      "Guía"
+    ]
   },
   {
     "slug": "automatizar-whatsapp-n8n-claude-api",
@@ -33,6 +64,11 @@
     "fecha": "14 Abril 2026",
     "fecha_iso": "2026-04-14",
     "minutos": 7,
-    "tags": ["WhatsApp API", "n8n", "Claude API", "Producción"]
+    "tags": [
+      "WhatsApp API",
+      "n8n",
+      "Claude API",
+      "Producción"
+    ]
   }
 ]
